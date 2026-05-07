@@ -951,7 +951,745 @@ b:1
 }
 ];
 
-const paket4 = []; const paket5 = []; const paket6 = []; const paket7 = []; // Isi sesuai kebutuhan
+const paket4 = [
+  {
+    t: "<ruby>消費者<rt>しょうひしゃ</rt></ruby>に<ruby>安全<rt>あんぜん</rt></ruby>な<ruby>食品<rt>しょくひん</rt></ruby>を<ruby>提供<rt>ていきょう</rt></ruby>するための、<ruby>三<rt>みっ</rt></ruby>つの<ruby>条件<rt>じょうけん</rt></ruby>とは<ruby>何<rt>なに</rt></ruby>でしょう。<ruby>正<rt>ただ</rt></ruby>しいものを<ruby>一<rt>ひと</rt></ruby>つ<ruby>選<rt>えら</rt></ruby>びなさい。",
+    p: [
+      "<ruby>高<rt>たか</rt></ruby>い<ruby>原材料<rt>げんざいりょう</rt></ruby>、<ruby>早<rt>はや</rt></ruby>い<ruby>製造方法<rt>せいぞうほうほう</rt></ruby>、<ruby>大規模工場<rt>だいきぼこうじょう</rt></ruby>",
+      "<ruby>外国<rt>がいこく</rt></ruby>の<ruby>原材料<rt>げんざいりょう</rt></ruby>、<ruby>自動製造工程<rt>じどうせいぞうこうてい</rt></ruby>、<ruby>大<rt>おお</rt></ruby>きな<ruby>食品倉庫<rt>しょくひんそうこ</rt></ruby>",
+      "<ruby>安全<rt>あんぜん</rt></ruby>な<ruby>原材料<rt>げんざいりょう</rt></ruby>、きれいな<ruby>製造環境<rt>せいぞうかんきょう</rt></ruby>、<ruby>食品<rt>しょくひん</rt></ruby>の<ruby>衛生的<rt>えいせいてき</rt></ruby>な<ruby>取<rt>と</rt></ruby>り<ruby>扱<rt>あつか</rt></ruby>い"
+    ],
+    b: 2
+  },
+  {
+    t: "<ruby>帽子<rt>ぼうし</rt></ruby>の<ruby>正<rt>ただ</rt></ruby>しい<ruby>被<rt>かぶ</rt></ruby>り<ruby>方<rt>かた</rt></ruby>は<ruby>次<rt>つぎ</rt></ruby>のどれでしょうか。<ruby>間違<rt>まちが</rt></ruby>っているものを<ruby>一<rt>ひと</rt></ruby>つ<ruby>選<rt>えら</rt></ruby>びなさい。",
+    p: [
+      "<ruby>被<rt>かぶ</rt></ruby>る<ruby>前<rt>まえ</rt></ruby>には<ruby>髪<rt>かみ</rt></ruby>の<ruby>毛<rt>け</rt></ruby>をよくブラッシングする",
+      "<ruby>髪<rt>かみ</rt></ruby>の<ruby>毛<rt>け</rt></ruby>は<ruby>少<rt>すこ</rt></ruby>しであれ<ruby>出<rt>で</rt></ruby>ても<ruby>構<rt>かま</rt></ruby>わない",
+      "ネットを<ruby>内側<rt>うちがわ</rt></ruby>に<ruby>使用<rt>しよう</rt></ruby>する"
+    ],
+    b: 1
+  },
+  {
+    t: "<ruby>作業服<rt>さぎょうふく</rt></ruby>についている<ruby>髪<rt>かみ</rt></ruby>の<ruby>毛<rt>け</rt></ruby>やほこりを<ruby>取<rt>と</rt></ruby>るために、<ruby>作業場<rt>さぎょうじょう</rt></ruby>に<ruby>入<rt>はい</rt></ruby>る<ruby>前<rt>まえ</rt></ruby>に<ruby>何<rt>なに</rt></ruby>をしますか？",
+    p: [
+      "<ruby>粘着<rt>ねんちゃく</rt></ruby>ローラーやエアーシャワーを<ruby>使<rt>つか</rt></ruby>います",
+      "<ruby>作業服<rt>さぎょうふく</rt></ruby>を<ruby>洗濯<rt>せんたく</rt></ruby>します",
+      "<ruby>帽子<rt>ぼうし</rt></ruby>を<ruby>脱<rt>ぬ</rt></ruby>ぎます"
+    ],
+    b: 0
+  },
+  {
+    t: "<ruby>重<rt>おも</rt></ruby>い<ruby>物<rt>もの</rt></ruby>を<ruby>取<rt>と</rt></ruby>り<ruby>扱<rt>あつか</rt></ruby>う<ruby>時<rt>とき</rt></ruby>に<ruby>注意<rt>ちゅうい</rt></ruby>する<ruby>点<rt>てん</rt></ruby>で、<ruby>間違<rt>まちが</rt></ruby>っているものは<ruby>次<rt>つぎ</rt></ruby>のどれでしょう。",
+    p: [
+      "<ruby>重<rt>おも</rt></ruby>い<ruby>物<rt>もの</rt></ruby>を<ruby>運<rt>はこ</rt></ruby>ぶときは、できるだけ<ruby>台車<rt>だいしゃ</rt></ruby>を<ruby>使用<rt>しよう</rt></ruby>する",
+      "<ruby>重<rt>おも</rt></ruby>い<ruby>物<rt>もの</rt></ruby>を<ruby>持<rt>も</rt></ruby>ち<ruby>上<rt>あ</rt></ruby>げるときは、<ruby>身体<rt>しんたい</rt></ruby>を<ruby>重<rt>おも</rt></ruby>い<ruby>物<rt>もの</rt></ruby>に<ruby>近<rt>ちか</rt></ruby>づけて、<ruby>膝<rt>ひざ</rt></ruby>を<ruby>曲<rt>ま</rt></ruby>げて、<ruby>腰<rt>こし</rt></ruby>を<ruby>下<rt>お</rt></ruby>ろして<ruby>重<rt>おも</rt></ruby>い<ruby>物<rt>もの</rt></ruby>を<ruby>抱<rt>かか</rt></ruby>えて、<ruby>膝<rt>ひざ</rt></ruby>を<ruby>伸<rt>の</rt></ruby>ばしながらゆっくり<ruby>立<rt>た</rt></ruby>ち<ruby>上<rt>あ</rt></ruby>がる",
+      "<ruby>重<rt>おも</rt></ruby>い<ruby>物<rt>もの</rt></ruby>から<ruby>体<rt>からだ</rt></ruby>を<ruby>離<rt>はな</rt></ruby>して、<ruby>重心<rt>じゅうしん</rt></ruby>を<ruby>高<rt>たか</rt></ruby>くする<ruby>姿勢<rt>しせい</rt></ruby>をとる"
+    ],
+    b: 2
+  },
+  {
+    t: "<ruby>熱中症<rt>ねっちゅうしょう</rt></ruby>の<ruby>症状<rt>しょうじょう</rt></ruby>の<ruby>出<rt>で</rt></ruby>た<ruby>人<rt>ひと</rt></ruby>には<ruby>何<rt>なに</rt></ruby>をすればよいでしょうか。<ruby>間違<rt>まちが</rt></ruby>っているものを<ruby>一<rt>ひと</rt></ruby>つ<ruby>選<rt>えら</rt></ruby>びなさい。",
+    p: [
+      "<ruby>衣服<rt>いふく</rt></ruby>をゆるめて<ruby>体<rt>からだ</rt></ruby>を<ruby>冷<rt>ひ</rt></ruby>やす",
+      "そのまま<ruby>寝<rt>ね</rt></ruby>かして<ruby>置<rt>お</rt></ruby>く",
+      "<ruby>水<rt>みず</rt></ruby>に<ruby>食塩<rt>しょくえん</rt></ruby>と<ruby>ブドウ糖<rt>とう</rt></ruby>を<ruby>溶<rt>と</rt></ruby>かした<ruby>飲<rt>の</rt></ruby>み<ruby>物<rt>もの</rt></ruby>を<ruby>与<rt>あた</rt></ruby>える"
+    ],
+    b: 1
+  },
+  {
+    t: "<ruby>働<rt>はたら</rt></ruby>いた<ruby>経験<rt>けいけん</rt></ruby>の<ruby>少<rt>すく</rt></ruby>ない<ruby>人<rt>ひと</rt></ruby>たちの<ruby>労働災害<rt>ろうどうさいがい</rt></ruby>で<ruby>最<rt>もっと</rt></ruby>も<ruby>多<rt>おお</rt></ruby>いものはどれでしょうか。",
+    p: [
+      "やけど",
+      "<ruby>転倒<rt>てんとう</rt></ruby>",
+      "はさまれ、<ruby>巻<rt>ま</rt></ruby>き<ruby>込<rt>こ</rt></ruby>まれ"
+    ],
+    b: 1
+  },
+  {
+    t: "5S<ruby>活動<rt>かつどう</rt></ruby>の<ruby>中<rt>なか</rt></ruby>の「<ruby>整理<rt>せいり</rt></ruby>」の<ruby>意味<rt>いみ</rt></ruby>で<ruby>正<rt>ただ</rt></ruby>しいものを<ruby>一<rt>ひと</rt></ruby>つ<ruby>選<rt>えら</rt></ruby>びなさい。",
+    p: [
+      "<ruby>必要<rt>ひつよう</rt></ruby>なものがすぐに<ruby>取<rt>と</rt></ruby>り<ruby>出<rt>だ</rt></ruby>せるように<ruby>置<rt>お</rt></ruby>き<ruby>場所<rt>ばしょ</rt></ruby>を<ruby>決<rt>き</rt></ruby>めておく",
+      "<ruby>作業場<rt>さぎょうじょう</rt></ruby>とその<ruby>周辺<rt>しゅうへん</rt></ruby>をいつもきれいに<ruby>掃除<rt>そうじ</rt></ruby>する",
+      "<ruby>必要<rt>ひつよう</rt></ruby>なものは<ruby>保管<rt>ほかん</rt></ruby>し、<ruby>不要<rt>ふよう</rt></ruby>なものは<ruby>捨<rt>す</rt></ruby>てる"
+    ],
+    b: 2
+  },
+  {
+    t: "ポケットのない<ruby>作業服<rt>さぎょうふく</rt></ruby>を<ruby>着<rt>き</rt></ruby>る<ruby>理由<rt>りゆう</rt></ruby>は<ruby>何<rt>なん</rt></ruby>ですか？",
+    p: [
+      "<ruby>作業服<rt>さぎょうふく</rt></ruby>を<ruby>軽<rt>かる</rt></ruby>くするため",
+      "<ruby>作業場<rt>さぎょうじょう</rt></ruby>に<ruby>使<rt>つか</rt></ruby>わないものを<ruby>持<rt>も</rt></ruby>ち<ruby>込<rt>こ</rt></ruby>まないようにするため",
+      "<ruby>作業場<rt>さぎょうじょう</rt></ruby>で<ruby>使<rt>つか</rt></ruby>いやすくするため"
+    ],
+    b: 1
+  },
+  {
+    t: "<ruby>作業前<rt>さぎょうぜん</rt></ruby>に<ruby>行<rt>おこな</rt></ruby>うことで<ruby>間違<rt>まちが</rt></ruby>っているものを<ruby>一<rt>ひと</rt></ruby>つ<ruby>選<rt>えら</rt></ruby>びなさい。",
+    p: [
+      "<ruby>作業内容<rt>さぎょうないよう</rt></ruby>の<ruby>確認<rt>かくにん</rt></ruby>をする",
+      "<ruby>機械<rt>きかい</rt></ruby>や<ruby>器具<rt>きぐ</rt></ruby>の<ruby>確認<rt>かくにん</rt></ruby>は<ruby>作業後<rt>さぎょうご</rt></ruby>に<ruby>行<rt>おこな</rt></ruby>えば<ruby>良<rt>よ</rt></ruby>いので、<ruby>作業前<rt>さぎょうぜん</rt></ruby>に<ruby>行<rt>おこな</rt></ruby>わない",
+      "<ruby>機械<rt>きかい</rt></ruby>や<ruby>器具<rt>きぐ</rt></ruby>に<ruby>汚れ<rt>よごれ</rt></ruby>や<ruby>不備<rt>ふび</rt></ruby>が<ruby>無<rt>な</rt></ruby>いか、<ruby>点検<rt>てんけん</rt></ruby>する"
+    ],
+    b: 1
+  },
+  {
+    t: "<ruby>大<rt>おお</rt></ruby>きな<ruby>原材料<rt>げんざいりょう</rt></ruby>を<ruby>加熱<rt>かねつ</rt></ruby>する<ruby>際<rt>さい</rt></ruby>、<ruby>何<rt>なに</rt></ruby>を<ruby>確認<rt>かくにん</rt></ruby>する<ruby>必要<rt>ひつよう</rt></ruby>がありますか？",
+    p: [
+      "<ruby>原材料<rt>げんざいりょう</rt></ruby>の<ruby>色<rt>いろ</rt></ruby>を<ruby>確認<rt>かくにん</rt></ruby>することが<ruby>必要<rt>ひつよう</rt></ruby>です",
+      "<ruby>外側<rt>そとがわ</rt></ruby>が<ruby>焦<rt>こ</rt></ruby>げていないか<ruby>確認<rt>かくにん</rt></ruby>することが<ruby>必要<rt>ひつよう</rt></ruby>です",
+      "<ruby>中心温度<rt>ちゅうしんおんど</rt></ruby>を<ruby>確認<rt>かくにん</rt></ruby>することが<ruby>必要<rt>ひつよう</rt></ruby>です"
+    ],
+    b: 2
+  },
+  {
+    t: "<ruby>魚介類<rt>ぎょかいるい</rt></ruby>を<ruby>洗浄<rt>せんじょう</rt></ruby>する<ruby>時<rt>とき</rt></ruby>、どのような<ruby>方法<rt>ほうほう</rt></ruby>が<ruby>使<rt>つか</rt></ruby>われることがありますか？",
+    p: [
+      "<ruby>適正<rt>てきせい</rt></ruby>な<ruby>濃度<rt>のうど</rt></ruby>の<ruby>食塩水<rt>しょくえんすい</rt></ruby>で<ruby>洗<rt>あら</rt></ruby>います",
+      "<ruby>魚介類<rt>ぎょかいるい</rt></ruby>をそのまま<ruby>洗<rt>あら</rt></ruby>いません",
+      "<ruby>水道水<rt>すいどうすい</rt></ruby>でただ<ruby>洗<rt>あら</rt></ruby>います"
+    ],
+    b: 0
+  },
+  {
+    t: "<ruby>袋<rt>ふくろ</rt></ruby>や<ruby>容器<rt>ようき</rt></ruby>の<ruby>数<rt>かず</rt></ruby>と<ruby>切れ端<rt>きれはし</rt></ruby>の<ruby>数<rt>かず</rt></ruby>を<ruby>確認<rt>かくにん</rt></ruby>する<ruby>理由<rt>りゆう</rt></ruby>は<ruby>何<rt>なん</rt></ruby>ですか？",
+    p: [
+      "<ruby>容器<rt>ようき</rt></ruby>をきれいに<ruby>保<rt>たも</rt></ruby>つため",
+      "<ruby>食品<rt>しょくひん</rt></ruby>が<ruby>正<rt>ただ</rt></ruby>しく<ruby>包装<rt>ほうそう</rt></ruby>されていることを<ruby>確認<rt>かくにん</rt></ruby>するため",
+      "<ruby>数<rt>かず</rt></ruby>が<ruby>同<rt>おな</rt></ruby>じであることを<ruby>確認<rt>かくにん</rt></ruby>し、<ruby>混入<rt>こんにゅう</rt></ruby>を<ruby>防<rt>ふせ</rt></ruby>ぐため"
+    ],
+    b: 2
+  },
+  {
+    t: "<ruby>食品安全<rt>しょくひんあんぜん</rt></ruby>はなぜ<ruby>大切<rt>たいせつ</rt></ruby>ですか。<ruby>正<rt>ただ</rt></ruby>しいものを<ruby>一<rt>ひと</rt></ruby>つ<ruby>選<rt>えら</rt></ruby>びなさい。",
+    p: [
+      "お金もうけのため",
+      "<ruby>消費者<rt>しょうひしゃ</rt></ruby>が<ruby>安全<rt>あんぜん</rt></ruby>で<ruby>安心<rt>あんしん</rt></ruby>できる<ruby>食品<rt>しょくひん</rt></ruby>を<ruby>求<rt>もと</rt></ruby>めるため",
+      "<ruby>生産効率<rt>せいさんこうりつ</rt></ruby>を<ruby>上<rt>あ</rt></ruby>げるため"
+    ],
+    b: 1
+  },
+  {
+    t: "カビについて<ruby>正<rt>ただ</rt></ruby>しいものを<ruby>選<rt>えら</rt></ruby>びなさい。",
+    p: [
+      "カビには<ruby>毒<rt>どく</rt></ruby>がないのでほおっておく",
+      "<ruby>豆<rt>まめ</rt></ruby>、<ruby>穀類<rt>こくるい</rt></ruby>、<ruby>野菜<rt>やさい</rt></ruby>、<ruby>果物<rt>くだもの</rt></ruby>などはカビに<ruby>汚染<rt>おせん</rt></ruby>されやすいので<ruby>保存<rt>ほぞん</rt></ruby>には<ruby>気<rt>き</rt></ruby>を<ruby>付<rt>つ</rt></ruby>ける",
+      "カビの<ruby>増殖<rt>ぞうしょく</rt></ruby>を<ruby>防<rt>ふせ</rt></ruby>ぐために、<ruby>食品<rt>しょくひん</rt></ruby>はできるだけ<ruby>高温<rt>こうおん</rt></ruby>で<ruby>保存<rt>ほぞん</rt></ruby>する"
+    ],
+    b: 1
+  },
+  {
+    t: "<ruby>加工食品<rt>かこうしょくひん</rt></ruby>の<ruby>容器<rt>ようき</rt></ruby>や<ruby>袋<rt>ふくろ</rt></ruby>に<ruby>表示<rt>ひょうじ</rt></ruby>されている「<ruby>賞味期限<rt>しょうみきげん</rt></ruby>」と「<ruby>消費期限<rt>しょうひきげん</rt></ruby>」は<ruby>誰<rt>だれ</rt></ruby>が<ruby>決<rt>き</rt></ruby>めますか？",
+    p: [
+      "<ruby>消費者<rt>しょうひしゃ</rt></ruby>が<ruby>決<rt>き</rt></ruby>める",
+      "<ruby>食品製造工場<rt>しょくひんせいぞうこうじょう</rt></ruby>が<ruby>決<rt>き</rt></ruby>める",
+      "<ruby>原材料<rt>げんざいりょう</rt></ruby>の<ruby>供給会社<rt>きょうきゅうがいしゃ</rt></ruby>が<ruby>決<rt>き</rt></ruby>める"
+    ],
+    b: 1
+  },
+  {
+    t: "<ruby>作業<rt>さぎょう</rt></ruby>をするときにマフラーを<ruby>巻<rt>ま</rt></ruby>いていてもいいでしょうか。<ruby>正<rt>ただ</rt></ruby>しいものを<ruby>一<rt>ひと</rt></ruby>つ<ruby>選<rt>えら</rt></ruby>びなさい。",
+    p: [
+      "<ruby>個人<rt>こじん</rt></ruby>の<ruby>自由<rt>じゆう</rt></ruby>なのでかまわない",
+      "<ruby>十分気<rt>じゅうぶんき</rt></ruby>を<ruby>付<rt>つ</rt></ruby>ければ、<ruby>巻<rt>ま</rt></ruby>いていてもよい",
+      "<ruby>巻<rt>ま</rt></ruby>き<ruby>込<rt>こ</rt></ruby>まれるおそれのあるものは、<ruby>着用<rt>ちゃくよう</rt></ruby>しない"
+    ],
+    b: 2
+  },
+  {
+    t: "<ruby>作業前<rt>さぎょうぜん</rt></ruby>にネックレスやイヤリングはどうしますか。<ruby>間違<rt>まちが</rt></ruby>っているものを<ruby>一<rt>ひと</rt></ruby>つ<ruby>選<rt>えら</rt></ruby>びなさい。",
+    p: [
+      "そのまま<ruby>身<rt>み</rt></ruby>につけて<ruby>作業<rt>さぎょう</rt></ruby>をしてもかまわない",
+      "<ruby>全<rt>すべ</rt></ruby>て<ruby>外<rt>はず</rt></ruby>してロッカーなどに<ruby>保管<rt>ほかん</rt></ruby>する",
+      "<ruby>基本的<rt>きほんてき</rt></ruby>に<ruby>職場<rt>しょくば</rt></ruby>にはつけて<ruby>来<rt>こ</rt></ruby>ないようにする"
+    ],
+    b: 0
+  },
+  {
+    t: "<ruby>作業中<rt>さぎょうちゅう</rt></ruby>の<ruby>注意事項<rt>ちゅういじこう</rt></ruby>について<ruby>正<rt>ただ</rt></ruby>しいものを<ruby>一<rt>ひと</rt></ruby>つ<ruby>選<rt>えら</rt></ruby>びなさい。",
+    p: [
+      "<ruby>危険<rt>きけん</rt></ruby>な<ruby>箇所<rt>かしょ</rt></ruby>を<ruby>見<rt>み</rt></ruby>つけたら、すぐに<ruby>自分<rt>じぶん</rt></ruby>でなおす",
+      "よそ<ruby>見<rt>み</rt></ruby>やムダ<ruby>話<rt>ばなし</rt></ruby>はしない",
+      "<ruby>職場<rt>しょくば</rt></ruby>はいつでも<ruby>無断<rt>むだん</rt></ruby>で<ruby>離<rt>はな</rt></ruby>れてもよい"
+    ],
+    b: 1
+  },
+  {
+    t: "<ruby>微生物<rt>びせいぶつ</rt></ruby>を<ruby>増殖<rt>ぞうしょく</rt></ruby>させないために、<ruby>食品<rt>しょくひん</rt></ruby>の<ruby>取<rt>と</rt></ruby>り<ruby>扱<rt>あつか</rt></ruby>いで<ruby>間違<rt>まちが</rt></ruby>っているものを<ruby>一<rt>ひと</rt></ruby>つ<ruby>選<rt>えら</rt></ruby>びなさい。",
+    p: [
+      "<ruby>加熱<rt>かねつ</rt></ruby>した<ruby>食品<rt>しょくひん</rt></ruby>はできるだけゆっくり<ruby>冷却<rt>れいきゃく</rt></ruby>する",
+      "<ruby>食品<rt>しょくひん</rt></ruby>は<ruby>適切<rt>てきせつ</rt></ruby>な<ruby>温度<rt>おんど</rt></ruby>で<ruby>保管<rt>ほかん</rt></ruby>する",
+      "<ruby>冷蔵庫<rt>れいぞうこ</rt></ruby>、<ruby>冷凍庫<rt>れいとうこ</rt></ruby>は<ruby>適切<rt>てきせつ</rt></ruby>な<ruby>温度<rt>おんど</rt></ruby>で<ruby>管理<rt>かんり</rt></ruby>する"
+    ],
+    b: 0
+  },
+  {
+    t: "<ruby>作業靴<rt>さぎょうぐつ</rt></ruby>の<ruby>取<rt>と</rt></ruby>り<ruby>扱<rt>あつか</rt></ruby>いで<ruby>間違<rt>まちが</rt></ruby>っているものを<ruby>一<rt>ひと</rt></ruby>つ<ruby>選<rt>えら</rt></ruby>びなさい。",
+    p: [
+      "<ruby>作業靴<rt>さぎょうぐつ</rt></ruby>は<ruby>常<rt>つね</rt></ruby>に<ruby>清潔<rt>せいけつ</rt></ruby>にしておく",
+      "<ruby>作業場<rt>さぎょうじょう</rt></ruby>へは<ruby>通勤靴<rt>つうきんぐつ</rt></ruby>でそのまま<ruby>入<rt>はい</rt></ruby>ってもよい",
+      "<ruby>作業靴<rt>さぎょうぐつ</rt></ruby>は<ruby>汚染区<rt>おせんく</rt></ruby>から<ruby>非汚染区<rt>ひおせんく</rt></ruby>へ<ruby>入<rt>はい</rt></ruby>る<ruby>時<rt>とき</rt></ruby>には、かならず<ruby>消毒液<rt>しょうどくえき</rt></ruby>を<ruby>使<rt>つか</rt></ruby>った<ruby>洗浄装置<rt>せんじょうそうち</rt></ruby>で<ruby>消毒<rt>しょうどく</rt></ruby>する"
+    ],
+    b: 1
+  },
+  {
+    t: "<ruby>異物混入<rt>いぶつこんにゅう</rt></ruby>で<ruby>特<rt>とく</rt></ruby>に<ruby>多<rt>おお</rt></ruby>いものは<ruby>何<rt>なに</rt></ruby>でしょうか。<ruby>正<rt>ただ</rt></ruby>しいものを<ruby>一<rt>ひと</rt></ruby>つ<ruby>選<rt>えら</rt></ruby>びなさい。",
+    p: [
+      "<ruby>金属<rt>きんぞく</rt></ruby>やガラス",
+      "<ruby>髪<rt>かみ</rt></ruby>の<ruby>毛<rt>け</rt></ruby>と<ruby>虫<rt>むし</rt></ruby>",
+      "プラスチック"
+    ],
+    b: 1
+  },
+  {
+    t: "5S<ruby>活動<rt>かつどう</rt></ruby>で<ruby>正<rt>ただ</rt></ruby>しいものを<ruby>一<rt>ひと</rt></ruby>つ<ruby>選<rt>えら</rt></ruby>びなさい。",
+    p: [
+      "<ruby>整理<rt>せいり</rt></ruby>・<ruby>整頓<rt>せいとん</rt></ruby>・<ruby>安全<rt>あんぜん</rt></ruby>・<ruby>準備<rt>じゅんび</rt></ruby>・<ruby>清潔<rt>せいけつ</rt></ruby>",
+      "<ruby>安心<rt>あんしん</rt></ruby>・<ruby>安全<rt>あんぜん</rt></ruby>・<ruby>清掃<rt>せいそう</rt></ruby>・<ruby>洗浄<rt>せんじょう</rt></ruby>・<ruby>確認<rt>かくにん</rt></ruby>",
+      "<ruby>整理<rt>せいり</rt></ruby>・<ruby>整頓<rt>せいとん</rt></ruby>・<ruby>清掃<rt>せいそう</rt></ruby>・<ruby>清潔<rt>せいけつ</rt></ruby>・<ruby>習慣<rt>しゅうかん</rt></ruby>"
+    ],
+    b: 2
+  },
+  {
+    t: "<ruby>整頓<rt>せいとん</rt></ruby>の<ruby>正<rt>ただ</rt></ruby>しい<ruby>意味<rt>いみ</rt></ruby>はどれですか。<ruby>一<rt>ひと</rt></ruby>つ<ruby>選<rt>えら</rt></ruby>びなさい。",
+    p: [
+      "<ruby>必要<rt>ひつよう</rt></ruby>な<ruby>物<rt>もの</rt></ruby>はすぐ<ruby>取<rt>と</rt></ruby>り<ruby>出<rt>だ</rt></ruby>せるように、<ruby>置<rt>お</rt></ruby>き<ruby>場所<rt>ばしょ</rt></ruby>を<ruby>決<rt>き</rt></ruby>めておく",
+      "<ruby>作業場所<rt>さぎょうばしょ</rt></ruby>とその<ruby>周辺<rt>しゅうへん</rt></ruby>をいつもきれいに<ruby>掃除<rt>そうじ</rt></ruby>する",
+      "<ruby>必要<rt>ひつよう</rt></ruby>な<ruby>物<rt>もの</rt></ruby>を<ruby>保管<rt>ほかん</rt></ruby>し、<ruby>不要<rt>ふよう</rt></ruby>なものは<ruby>捨<rt>す</rt></ruby>てる"
+    ],
+    b: 0
+  },
+  {
+    t: "<ruby>金属<rt>きんぞく</rt></ruby>が<ruby>食品<rt>しょくひん</rt></ruby>に<ruby>混入<rt>こんにゅう</rt></ruby>するかもしれない<ruby>場合<rt>ばあい</rt></ruby>、<ruby>何<rt>なに</rt></ruby>を<ruby>使<rt>つか</rt></ruby>って<ruby>検査<rt>けんさ</rt></ruby>しますか？",
+    p: [
+      "<ruby>金属探知機<rt>きんぞくたんちき</rt></ruby>を<ruby>使<rt>つか</rt></ruby>って<ruby>検査<rt>けんさ</rt></ruby>します",
+      "<ruby>空気清浄機<rt>くうきせいじょうき</rt></ruby>を<ruby>使<rt>つか</rt></ruby>って<ruby>検査<rt>けんさ</rt></ruby>します",
+      "<ruby>色<rt>いろ</rt></ruby>センサーを<ruby>使<rt>つか</rt></ruby>って<ruby>検査<rt>けんさ</rt></ruby>します"
+    ],
+    b: 0
+  },
+  {
+    t: "<ruby>異物混入<rt>いぶつこんにゅう</rt></ruby>が<ruby>見<rt>み</rt></ruby>つかった<ruby>場合<rt>ばあい</rt></ruby>、どの<ruby>対応<rt>たいおう</rt></ruby>が<ruby>正<rt>ただ</rt></ruby>しいでしょうか。",
+    p: [
+      "すぐに<ruby>自分<rt>じぶん</rt></ruby>で<ruby>異物<rt>いぶつ</rt></ruby>を<ruby>取<rt>と</rt></ruby>り<ruby>除<rt>のぞ</rt></ruby>けばよい",
+      "<ruby>直<rt>ただ</rt></ruby>ちに<ruby>作業<rt>さぎょう</rt></ruby>を<ruby>中止<rt>ちゅうし</rt></ruby>して、<ruby>責任者<rt>せきにんしゃ</rt></ruby>に<ruby>報告<rt>ほうこく</rt></ruby>する",
+      "<ruby>大<rt>たい</rt></ruby>したこともないので、ほおっておく"
+    ],
+    b: 1
+  },
+  {
+    t: "<ruby>製品<rt>せいひん</rt></ruby>にクレームが<ruby>来<rt>き</rt></ruby>た<ruby>場合<rt>ばあい</rt></ruby>、<ruby>何<rt>なに</rt></ruby>を<ruby>調<rt>しら</rt></ruby>べる<ruby>必要<rt>ひつよう</rt></ruby>がありますか？",
+    p: [
+      "<ruby>同<rt>おな</rt></ruby>じ<ruby>時期<rt>じき</rt></ruby>に<ruby>製造<rt>せいぞう</rt></ruby>した<ruby>製品<rt>せいひん</rt></ruby>に<ruby>同<rt>おな</rt></ruby>じ<ruby>問題<rt>もんだい</rt></ruby>がないかを<ruby>調<rt>しら</rt></ruby>べる<ruby>必要<rt>ひつよう</rt></ruby>があります",
+      "<ruby>製品<rt>せいひん</rt></ruby>の<ruby>外観<rt>がいかん</rt></ruby>が<ruby>正<rt>ただ</rt></ruby>しいかを<ruby>調<rt>しら</rt></ruby>べる<ruby>必要<rt>ひつよう</rt></ruby>があります",
+      "<ruby>製品<rt>せいひん</rt></ruby>の<ruby>包装<rt>ほうそう</rt></ruby>が<ruby>適切<rt>てきせつ</rt></ruby>かを<ruby>調<rt>しら</rt></ruby>べる<ruby>必要<rt>ひつよう</rt></ruby>があります"
+    ],
+    b: 0
+  },
+  {
+    t: "HACCP（ハサップ）で<ruby>対象<rt>たいしょう</rt></ruby>とする<ruby>三<rt>みっ</rt></ruby>つの<ruby>健康危害要因<rt>けんこうきがいよういん</rt></ruby>はどれか、<ruby>正<rt>ただ</rt></ruby>しいものを<ruby>一<rt>ひと</rt></ruby>つ<ruby>選<rt>えら</rt></ruby>びなさい。",
+    p: [
+      "<ruby>心理的危害要因<rt>しんりてききがいよういん</rt></ruby>・<ruby>健康的危害要因<rt>けんこうてききがいよういん</rt></ruby>・<ruby>金銭的危害要因<rt>きんせんてききがいよういん</rt></ruby>",
+      "<ruby>生物的危害要因<rt>せいぶつてききがいよういん</rt></ruby>・<ruby>化学的危害要因<rt>かがくてききがいよういん</rt></ruby>・<ruby>物理的危害要因<rt>ぶつりてききがいよういん</rt></ruby>",
+      "<ruby>安全的危害要因<rt>あんぜんてききがいよういん</rt></ruby>・<ruby>災害的危害要因<rt>さいがいてききがいよういん</rt></ruby>・<ruby>労働的危害要因<rt>ろうどうてききがいよういん</rt></ruby>"
+    ],
+    b: 1
+  },
+  {
+    t: "<ruby>危害要因<rt>きがいよういん</rt></ruby>を<ruby>含<rt>ふく</rt></ruby>まないようにするために、どのような<ruby>仕組<rt>しく</rt></ruby>みが<ruby>必要<rt>ひつよう</rt></ruby>ですか？",
+    p: [
+      "<ruby>特別<rt>とくべつ</rt></ruby>な<ruby>仕組<rt>しく</rt></ruby>みが<ruby>必要<rt>ひつよう</rt></ruby>です",
+      "<ruby>一般衛生管理<rt>いっぱんえいせいかんり</rt></ruby>だけで<ruby>十分<rt>じゅうぶん</rt></ruby>です",
+      "<ruby>食品<rt>しょくひん</rt></ruby>の<ruby>包装<rt>ほうそう</rt></ruby>を<ruby>変更<rt>へんこう</rt></ruby>することが<ruby>必要<rt>ひつよう</rt></ruby>です"
+    ],
+    b: 0
+  },
+  {
+    t: "<ruby>労働災害<rt>ろうどうさいがい</rt></ruby>が<ruby>発生<rt>はっせい</rt></ruby>したら、<ruby>間違<rt>まちが</rt></ruby>っている<ruby>対応<rt>たいおう</rt></ruby>はどれでしょうか。",
+    p: [
+      "<ruby>自分<rt>じぶん</rt></ruby>の<ruby>判断<rt>はんだん</rt></ruby>だけで、できるだけのことをやり<ruby>始<rt>はじ</rt></ruby>める",
+      "<ruby>必要<rt>ひつよう</rt></ruby>な<ruby>時<rt>とき</rt></ruby>は<ruby>非常停止<rt>ひじょうていし</rt></ruby>ボタンで<ruby>機械<rt>きかい</rt></ruby>を<ruby>止<rt>と</rt></ruby>める",
+      "<ruby>責任者<rt>せきにんしゃ</rt></ruby>の<ruby>指示<rt>しじ</rt></ruby>に<ruby>従<rt>したが</rt></ruby>い、<ruby>同僚<rt>どうりょう</rt></ruby>と<ruby>協力<rt>きょうりょく</rt></ruby>して<ruby>適切<rt>てきせつ</rt></ruby>な<ruby>処置<rt>しょち</rt></ruby>を<ruby>取<rt>と</rt></ruby>る"
+    ],
+    b: 0
+  },
+  {
+    t: "<ruby>冷凍庫<rt>れいとうこ</rt></ruby>と<ruby>冷蔵庫<rt>れいぞうこ</rt></ruby>は<ruby>何<rt>なん</rt></ruby>度で<ruby>管理<rt>かんり</rt></ruby>すればよいでしょうか。",
+    p: [
+      "<ruby>冷凍庫<rt>れいとうこ</rt></ruby>は0℃<ruby>以下<rt>いか</rt></ruby>、<ruby>冷蔵庫<rt>れいぞうこ</rt></ruby>は15℃<ruby>以下<rt>いか</rt></ruby>",
+      "<ruby>冷凍庫<rt>れいとうこ</rt></ruby>は-15℃<ruby>以下<rt>いか</rt></ruby>、<ruby>冷蔵庫<rt>れいぞうこ</rt></ruby>は10℃<ruby>以下<rt>いか</rt></ruby>",
+      "<ruby>特<rt>とく</rt></ruby>に<ruby>温度管理<rt>おんどかんり</rt></ruby>はしなくてもよい"
+    ],
+    b: 1
+  },
+  {
+    t: "ベルトコンベアの<ruby>清掃<rt>せいそう</rt></ruby>をする<ruby>時<rt>とき</rt></ruby>、<ruby>間違<rt>まちが</rt></ruby>った<ruby>方法<rt>ほうほう</rt></ruby>を<ruby>一<rt>ひと</rt></ruby>つ<ruby>選<rt>えら</rt></ruby>びなさい。",
+    p: [
+      "かならず<ruby>機械<rt>きかい</rt></ruby>を<ruby>止<rt>と</rt></ruby>めてから<ruby>行<rt>おこな</rt></ruby>う",
+      "<ruby>機械<rt>きかい</rt></ruby>を<ruby>止<rt>と</rt></ruby>めて<ruby>作業<rt>さぎょう</rt></ruby>をする<ruby>時<rt>とき</rt></ruby>は、<ruby>不意<rt>ふい</rt></ruby>の<ruby>起動<rt>きどう</rt></ruby>を<ruby>防止<rt>ぼうし</rt></ruby>する",
+      "<ruby>動<rt>うご</rt></ruby>かしたままでも、<ruby>雑巾<rt>ぞうきん</rt></ruby>がはさまれないようにすればよい"
+    ],
+    b: 2
+  },
+  {
+    t: "30<ruby>濃度<rt>のうど</rt></ruby>％のNaClO<ruby>溶液<rt>ようえき</rt></ruby>があります。100ppmのNaClO<ruby>溶液<rt>ようえき</rt></ruby>から3Lを<ruby>作<rt>つく</rt></ruby>るのに、<ruby>溶液<rt>ようえき</rt></ruby>と<ruby>水<rt>みず</rt></ruby>はどれぐらいの<ruby>量<rt>りょう</rt></ruby>が<ruby>必要<rt>ひつよう</rt></ruby>ですか。",
+    p: [
+      "1ml<ruby>溶液<rt>ようえき</rt></ruby>、2999ml<ruby>水<rt>みず</rt></ruby>",
+      "2ml<ruby>溶液<rt>ようえき</rt></ruby>、2998ml<ruby>水<rt>みず</rt></ruby>",
+      "3ml<ruby>溶液<rt>ようえき</rt></ruby>、3000ml<ruby>水<rt>みず</rt></ruby>"
+    ],
+    b: 0
+  },
+  {
+    t: "フレコンバッグをクレーンで<ruby>吊<rt>つ</rt></ruby>り<ruby>上<rt>あ</rt></ruby>げ、<ruby>荷台<rt>にだい</rt></ruby>から<ruby>降<rt>お</rt></ruby>ろそうとした<ruby>時<rt>とき</rt></ruby>にフレコンバッグが<ruby>揺<rt>ゆ</rt></ruby>れて<ruby>身体<rt>しんたい</rt></ruby>に<ruby>当<rt>あ</rt></ruby>たり、<ruby>荷台<rt>にだい</rt></ruby>から<ruby>落<rt>お</rt></ruby>ちそうになった。この<ruby>事故<rt>じこ</rt></ruby>を<ruby>防<rt>ふせ</rt></ruby>ぐために、どうしたらいいですか。",
+    img: "https://lh3.googleusercontent.com/d/1PCAnQNMKfy6kpNTqQMyfX91TlTRhKEeH",
+    p: [
+      "クレーンを<ruby>使<rt>つか</rt></ruby>う<ruby>時<rt>とき</rt></ruby>、<ruby>自分<rt>じぶん</rt></ruby>の<ruby>立<rt>た</rt></ruby>つ<ruby>場所<rt>ばしょ</rt></ruby>を<ruby>十分理解<rt>じゅうぶんりかい</rt></ruby>しておく",
+      "フレコンバッグを<ruby>吊<rt>つ</rt></ruby>り<ruby>上<rt>あ</rt></ruby>げる<ruby>際<rt>さい</rt></ruby>、クレーンのワイヤーが<ruby>切<rt>き</rt></ruby>れていたこと",
+      "クレーンを<ruby>使<rt>つか</rt></ruby>う<ruby>時<rt>とき</rt></ruby>、フレコンバッグを<ruby>気<rt>き</rt></ruby>がつきましたこと"
+    ],
+    b: 0
+  },
+  {
+    t: "このイラストはフォークリフトで<ruby>空箱<rt>からばこ</rt></ruby>を<ruby>外<rt>そと</rt></ruby>の<ruby>置<rt>お</rt></ruby>き<ruby>場<rt>ば</rt></ruby>に<ruby>運<rt>はこ</rt></ruby>ぶため、<ruby>倉庫<rt>そうこ</rt></ruby>の<ruby>入口<rt>いりぐち</rt></ruby>を<ruby>一時停止<rt>いちじていし</rt></ruby>しないで<ruby>通過<rt>つうか</rt></ruby>した<ruby>時<rt>とき</rt></ruby>、<ruby>横<rt>よこ</rt></ruby>から<ruby>来<rt>き</rt></ruby>た<ruby>人<rt>ひと</rt></ruby>とぶつかりそうになった<ruby>様子<rt>ようす</rt></ruby>です。この<ruby>事故<rt>じこ</rt></ruby>の<ruby>原因<rt>げんいん</rt></ruby>は<ruby>何<rt>なん</rt></ruby>ですか。",
+    img: "https://lh3.googleusercontent.com/d/1u14dpsYpP9iG6NlPgPz_TixfM0bMVo_v",
+    p: [
+      "<ruby>歩<rt>ある</rt></ruby>いている<ruby>人<rt>ひと</rt></ruby>が<ruby>帽子<rt>ぼうし</rt></ruby>をかぶっているため、フォークリフトが<ruby>見<rt>み</rt></ruby>えなかったため",
+      "フォークリフトの<ruby>運転者<rt>うんてんしゃ</rt></ruby>は<ruby>倉庫<rt>そうこ</rt></ruby>の<ruby>入口<rt>いりぐち</rt></ruby>で、<ruby>一時停止<rt>いちじていし</rt></ruby>しなかったため",
+      "<ruby>倉庫<rt>そうこ</rt></ruby>の<ruby>入口<rt>いりぐち</rt></ruby>が<ruby>狭<rt>せま</rt></ruby>かったため"
+    ],
+    b: 1
+  },
+  {
+    t: "<ruby>問題<rt>もんだい</rt></ruby>34の<ruby>事故<rt>じこ</rt></ruby>を<ruby>防<rt>ふせ</rt></ruby>ぐために、どうしたらよいですか。",
+    img: "https://lh3.googleusercontent.com/d/1u14dpsYpP9iG6NlPgPz_TixfM0bMVo_v",
+    p: [
+      "フォークリフトの<ruby>運転者<rt>うんてんしゃ</rt></ruby>は、<ruby>入口前<rt>いりぐちまえ</rt></ruby>での<ruby>一時停止<rt>いちじていし</rt></ruby>と、<ruby>指差呼称<rt>ゆびさしこしょう</rt></ruby>による<ruby>安全確認<rt>あんぜんかくにん</rt></ruby>をかならず<ruby>行<rt>おこな</rt></ruby>うようにする",
+      "<ruby>工場内<rt>こうじょうない</rt></ruby>では<ruby>帽子<rt>ぼうし</rt></ruby>をかぶらないようにする",
+      "<ruby>倉庫<rt>そうこ</rt></ruby>の<ruby>入口<rt>いりぐち</rt></ruby>を<ruby>大<rt>おお</rt></ruby>きくして、フォークリフトを<ruby>通<rt>とお</rt></ruby>しやすくする"
+    ],
+    b: 0
+  },
+  {
+    t: "<ruby>以下<rt>いか</rt></ruby>の<ruby>図<rt>ず</rt></ruby>は<ruby>作業場<rt>さぎょうじょう</rt></ruby>のホースの<ruby>状態<rt>じょうたい</rt></ruby>です。それについて<ruby>間違<rt>まちが</rt></ruby>っているものを<ruby>一<rt>ひと</rt></ruby>つ<ruby>選<rt>えら</rt></ruby>びなさい。",
+    img: "https://lh3.googleusercontent.com/d/1eAHSdl1HUZVTjtdWVdWaUg-wSOfFAOGo",
+    p: [
+      "<ruby>表面<rt>ひょうめん</rt></ruby>がボロボロになっているけど、<ruby>使用<rt>しよう</rt></ruby>に<ruby>影響<rt>えいきょう</rt></ruby>がないためそのまま<ruby>使用<rt>しよう</rt></ruby>する",
+      "<ruby>虫<rt>むし</rt></ruby>やカビの<ruby>発生<rt>はっせい</rt></ruby>になりやすい<ruby>状態<rt>じょうたい</rt></ruby>である",
+      "この<ruby>状態<rt>じょうたい</rt></ruby>で<ruby>使用<rt>しよう</rt></ruby>すると<ruby>異物混入<rt>いぶつこんにゅう</rt></ruby>が<ruby>発生<rt>はっせい</rt></ruby>しやすい"
+    ],
+    b: 0
+  },
+  {
+    t: "パンが<ruby>入<rt>はい</rt></ruby>った<ruby>箱<rt>はこ</rt></ruby>を<ruby>両手<rt>りょうて</rt></ruby>で<ruby>持<rt>も</rt></ruby>ち、トラックに<ruby>向<rt>む</rt></ruby>かって<ruby>駐車場<rt>ちゅうしゃじょう</rt></ruby>を<ruby>歩<rt>ある</rt></ruby>いていた<ruby>際<rt>さい</rt></ruby>、<ruby>足元<rt>あしもと</rt></ruby>に<ruby>置<rt>お</rt></ruby>かれていた<ruby>空箱<rt>からばこ</rt></ruby>に<ruby>気<rt>き</rt></ruby>づかず、つまずき<ruby>転倒<rt>てんとう</rt></ruby>しそうになった。この<ruby>事故<rt>じこ</rt></ruby>を<ruby>防<rt>ふせ</rt></ruby>ぐために、どうしたらいいですか。<ruby>間違<rt>まちが</rt></ruby>っているものを<ruby>一<rt>ひと</rt></ruby>つ<ruby>選<rt>えら</rt></ruby>びなさい。",
+    img: "https://lh3.googleusercontent.com/d/1bjV_-DItDQ0ItOjp68Af3BlBKEqlcHHr",
+    p: [
+      "<ruby>通路<rt>つうろ</rt></ruby>に<ruby>物<rt>もの</rt></ruby>を<ruby>置<rt>お</rt></ruby>きっぱなしにして、<ruby>箱<rt>はこ</rt></ruby>をいくつ<ruby>持<rt>も</rt></ruby>ってもいいです",
+      "<ruby>作業<rt>さぎょう</rt></ruby>で<ruby>使用<rt>しよう</rt></ruby>するものであっても、<ruby>通路<rt>つうろ</rt></ruby>にものを<ruby>置<rt>お</rt></ruby>きっぱなしにせず、<ruby>作業開始前<rt>さぎょうかいしまえ</rt></ruby>には<ruby>通路<rt>つうろ</rt></ruby>の<ruby>安全<rt>あんぜん</rt></ruby>を<ruby>確認<rt>かくにん</rt></ruby>すること",
+      "<ruby>箱<rt>はこ</rt></ruby>を<ruby>重<rt>かさ</rt></ruby>ねて<ruby>運<rt>はこ</rt></ruby>ぶ<ruby>際<rt>さい</rt></ruby>は、<ruby>前<rt>まえ</rt></ruby>が<ruby>見<rt>み</rt></ruby>えるように<ruby>運<rt>はこ</rt></ruby>ぶ"
+    ],
+    b: 0
+  },
+  {
+    t: "<ruby>以下<rt>いか</rt></ruby>の<ruby>図<rt>ず</rt></ruby>は<ruby>包装<rt>ほうそう</rt></ruby>ラインで、<ruby>製品<rt>せいひん</rt></ruby>が<ruby>詰<rt>つ</rt></ruby>まって<ruby>機械<rt>きかい</rt></ruby>が<ruby>止<rt>と</rt></ruby>まっていた<ruby>様子<rt>ようす</rt></ruby>です。その<ruby>対応<rt>たいおう</rt></ruby>について、<ruby>正<rt>ただ</rt></ruby>しいものを<ruby>一<rt>ひと</rt></ruby>つ<ruby>選<rt>えら</rt></ruby>びなさい。",
+    img: "https://lh3.googleusercontent.com/d/1MfEJA2L_dHhDTdevGob9MHLluVHRcxtf",
+    p: [
+      "<ruby>停止<rt>ていし</rt></ruby>ボタンを<ruby>押<rt>お</rt></ruby>し、<ruby>完全<rt>かんぜん</rt></ruby>な<ruby>停止<rt>ていし</rt></ruby>を<ruby>確認<rt>かくにん</rt></ruby>してから<ruby>作業<rt>さぎょう</rt></ruby>を<ruby>行<rt>おこな</rt></ruby>う",
+      "<ruby>誰<rt>だれ</rt></ruby>にも<ruby>放置<rt>ほうち</rt></ruby>する",
+      "<ruby>一人<rt>ひとり</rt></ruby>で<ruby>処理<rt>しょり</rt></ruby>をする"
+    ],
+    b: 0
+  },
+  {
+    t: "<ruby>以下<rt>いか</rt></ruby>の<ruby>図<rt>ず</rt></ruby>はA<ruby>子<rt>こ</rt></ruby>さんがお<ruby>湯<rt>ゆ</rt></ruby>を<ruby>捨<rt>す</rt></ruby>て、<ruby>転倒<rt>てんとう</rt></ruby>しそうな<ruby>様子<rt>ようす</rt></ruby>です。それについて、<ruby>間違<rt>まちが</rt></ruby>っているものを<ruby>一<rt>ひと</rt></ruby>つ<ruby>選<rt>えら</rt></ruby>びなさい。",
+    img: "https://lh3.googleusercontent.com/d/1iBbXAzJsztq75ctwhY6ECduSVS0w6Fzt",
+    p: [
+      "<ruby>熱湯<rt>ねっとう</rt></ruby>の<ruby>入<rt>はい</rt></ruby>った<ruby>大鍋<rt>おおなべ</rt></ruby>は<ruby>二人<rt>ふたり</rt></ruby>で<ruby>運<rt>はこ</rt></ruby>んだ<ruby>方<rt>ほう</rt></ruby>がよい",
+      "<ruby>運<rt>はこ</rt></ruby>ぶ<ruby>時<rt>とき</rt></ruby>にゴム<ruby>手袋<rt>てぶくろ</rt></ruby>、<ruby>前掛<rt>まえか</rt></ruby>け、メガネなどの<ruby>保護具<rt>ほごぐ</rt></ruby>をつける",
+      "<ruby>作業靴<rt>さぎょうぐつ</rt></ruby>を<ruby>着<rt>つ</rt></ruby>けば<ruby>一人<rt>ひとり</rt></ruby>でお<ruby>湯入<rt>ゆい</rt></ruby>りの<ruby>大鍋<rt>おおなべ</rt></ruby>を<ruby>運<rt>はこ</rt></ruby>んでも<ruby>問題<rt>もんだい</rt></ruby>はない"
+    ],
+    b: 2
+  },
+  {
+    t: "450グラムのうどん<ruby>麺<rt>めん</rt></ruby>を<ruby>作<rt>つく</rt></ruby>るためには、<ruby>小麦粉<rt>こむぎこ</rt></ruby>300グラムが<ruby>必要<rt>ひつよう</rt></ruby>です。では、<ruby>小麦粉<rt>こむぎこ</rt></ruby>6キログラムからどれだけのうどん<ruby>麺<rt>めん</rt></ruby>を<ruby>作<rt>つく</rt></ruby>ることが<ruby>出来<rt>でき</rt></ruby>るでしょうか。",
+    p: [
+      "9キログラムのうどん<ruby>麺<rt>めん</rt></ruby>",
+      "450キログラムのうどん<ruby>麺<rt>めん</rt></ruby>",
+      "300キログラムのうどん<ruby>麺<rt>めん</rt></ruby>"
+    ],
+    b: 0
+  }
+];
+
+const paket5 = [
+  {
+    t: "<ruby>消費<rt>しょうひ</rt></ruby><ruby>者<rt>しゃ</rt></ruby>に<ruby>安全<rt>あんぜん</rt></ruby>な<ruby>食品<rt>しょくひん</rt></ruby>を<ruby>提供<rt>ていきょう</rt></ruby>するためには、3<ruby>条件<rt>じょうけん</rt></ruby>が<ruby>必要<rt>ひつよう</rt></ruby>です。「<ruby>安全<rt>あんぜん</rt></ruby>な<ruby>原材料<rt>げんざいりょう</rt></ruby>」と「<ruby>食品<rt>しょくひん</rt></ruby>の<ruby>衛生<rt>えいせい</rt></ruby><ruby>探<rt>てき</rt></ruby><ruby>取扱<rt>とりあつか</rt></ruby>い」のほかに、もう<ruby>一<rt>ひと</rt></ruby>つの<ruby>条件<rt>じょうけん</rt></ruby>は<ruby>何<rt>なに</rt></ruby>ですか。",
+    p: [
+      "<ruby>きれいな製造環境<rt>きれいなせいぞうかんきょう</rt></ruby>",
+      "<ruby>効果<rt>こうか</rt></ruby><ruby>的<rt>てき</rt></ruby>なコスト<ruby>削減<rt>さくげん</rt></ruby><ruby>方法<rt>ほうほう</rt></ruby>",
+      "<ruby>生産<rt>せいさん</rt></ruby><ruby>規模<rt>きぼ</rt></ruby>と<ruby>生産<rt>せいさん</rt></ruby><ruby>施設<rt>しせつ</rt></ruby>の<ruby>面積<rt>めんせき</rt></ruby>"
+    ],
+    b: 0
+  },
+  {
+    t: "<ruby>下記<rt>かき</rt></ruby>のうち、<ruby>牡蠣<rt>かき</rt></ruby>などの<ruby>二枚貝<rt>にまいがい</rt></ruby>に<ruby>存在<rt>そんざい</rt></ruby>し、<ruby>感染<rt>かんせん</rt></ruby>した<ruby>人<rt>ひと</rt></ruby>が<ruby>調理<rt>ちょうり</rt></ruby>した<ruby>食品<rt>しょくひん</rt></ruby>や<ruby>水<rt>みず</rt></ruby>から<ruby>広<rt>ひろ</rt></ruby>がりやすい<ruby>食中毒<rt>しょくちゅうどく</rt></ruby>の<ruby>原因<rt>げんいん</rt></ruby><ruby>菌<rt>きん</rt></ruby>はどれですか。",
+    p: [
+      "<ruby>黄色<rt>おうしょく</rt></ruby>ブドウ<ruby>球菌<rt>きゅうきん</rt></ruby>",
+      "サルモネラ<ruby>菌<rt>きん</rt></ruby>",
+      "ノロウイルス"
+    ],
+    b: 2
+  },
+  {
+    t: "カンピロバクター<ruby>属<rt>ぞく</rt></ruby><ruby>菌<rt>きん</rt></ruby>による<ruby>食中毒<rt>しょくちゅうどく</rt></ruby>の<ruby>原因<rt>げんいん</rt></ruby>となる<ruby>食品<rt>しょくひん</rt></ruby>はどれですか。",
+    p: [
+      "<ruby>野菜<rt>やさい</rt></ruby>",
+      "<ruby>鶏肉<rt>けいにく</rt></ruby>",
+      "<ruby>魚介<rt>ぎょかい</rt></ruby><ruby>類<rt>るい</rt></ruby>"
+    ],
+    b: 1
+  },
+  {
+    t: "セレウス<ruby>菌<rt>きん</rt></ruby>による<ruby>食中毒<rt>しょくちゅうどく</rt></ruby>の<ruby>原因<rt>げんいん</rt></ruby>となる<ruby>食品<rt>しょくひん</rt></ruby>はどれですか。",
+    p: [
+      "<ruby>牡蠣<rt>かき</rt></ruby>",
+      "<ruby>米<rt>こめ</rt></ruby>や<ruby>小麦<rt>こむぎ</rt></ruby>などを<ruby>使<rt>つか</rt></ruby>って<ruby>調整<rt>ちょうせい</rt></ruby>された<ruby>食品<rt>しょくひん</rt></ruby>",
+      "<ruby>缶詰<rt>かんづめ</rt></ruby>"
+    ],
+    b: 1
+  },
+  {
+    t: "「<ruby>感染<rt>かんせん</rt></ruby><ruby>型<rt>がた</rt></ruby><ruby>食中毒<rt>しょくちゅうどく</rt></ruby>」の<ruby>代表<rt>だいひょう</rt></ruby><ruby>例<rt>れい</rt></ruby>はどれですか。",
+    p: [
+      "<ruby>腸管<rt>ちょうかん</rt></ruby><ruby>出血<rt>しゅっけつ</rt></ruby><ruby>性<rt>せい</rt></ruby><ruby>大腸菌<rt>だいちょうきん</rt></ruby>",
+      "ノロウイルス",
+      "<ruby>黄色<rt>おうしょく</rt></ruby>ブドウ<ruby>球菌<rt>きゅうきん</rt></ruby>"
+    ],
+    b: 1
+  },
+  {
+    t: "<ruby>食中毒<rt>しょくちゅうどく</rt></ruby>の<ruby>原因<rt>げんいん</rt></ruby>となる<ruby>微生物<rt>びせいぶつ</rt></ruby>を<ruby>防<rt>ふせ</rt></ruby>ぐために、3つの<ruby>原則<rt>げんそく</rt></ruby>を<ruby>守<rt>まも</rt></ruby>らなければなりません。「つけない」、「<ruby>殺<rt>ころ</rt></ruby>す」のほかに、もう<ruby>一<rt>ひと</rt></ruby>つは<ruby>何<rt>なに</rt></ruby>ですか。",
+    p: [
+      "<ruby>汚染<rt>おせん</rt></ruby>させない",
+      "<ruby>増<rt>ふ</rt></ruby>やさない",
+      "<ruby>増殖<rt>ぞうしょく</rt></ruby>させない"
+    ],
+    b: 1
+  },
+  {
+    t: "<ruby>手<rt>て</rt></ruby>や<ruby>指<rt>ゆび</rt></ruby>に<ruby>傷<rt>きず</rt></ruby>のある<ruby>人<rt>ひと</rt></ruby>が<ruby>調理<rt>ちょうri</rt></ruby>した<ruby>食品<rt>しょくひん</rt></ruby>で<ruby>発生<rt>はっせい</rt></ruby>しやすい<ruby>食中毒<rt>しょくちゅうどく</rt></ruby>はどれか、<ruby>正<rt>ただ</rt></ruby>しいものを<ruby>一<rt>ひと</rt></ruby>つ<ruby>選<rt>えら</rt></ruby>びなさい。",
+    p: [
+      "<ruby>黄色<rt>おうしょく</rt></ruby>ブドウ<ruby>球菌<rt>きゅうきん</rt></ruby>",
+      "ボツリヌス<ruby>菌<rt>きん</rt></ruby>",
+      "サルモネラ<ruby>菌<rt>きん</rt></ruby>"
+    ],
+    b: 0
+  },
+  {
+    t: "カビの<ruby>特徴<rt>とくちょう</rt></ruby>はどれですか。",
+    p: [
+      "<ruby>完全<rt>かんぜん</rt></ruby>になくすことはできない",
+      "<ruby>豆<rt>まめ</rt></ruby>や<ruby>穀類<rt>こくるい</rt></ruby>などは<ruby>汚染<rt>おせん</rt></ruby>されにくい",
+      "<ruby>低温<rt>ていおん</rt></ruby>で<ruby>食品<rt>しょくひん</rt></ruby>を<ruby>保存<rt>ほぞん</rt></ruby>さえすれば、<ruby>完全<rt>かんぜん</rt></ruby>に<ruby>防<rt>ふせ</rt></ruby>ぐことができる"
+    ],
+    b: 0
+  },
+  {
+    t: "<ruby>微生物<rt>びせいぶつ</rt></ruby>が<ruby>増殖<rt>ぞうしょく</rt></ruby>する、3つの<ruby>要素<rt>ようそ</rt></ruby>があります。「<ruby>温度<rt>おんど</rt></ruby>」、「<ruby>栄養分<rt>えいようぶん</rt></ruby>」のほかに、もう<ruby>一<rt>ひと</rt></ruby>つは<ruby>何<rt>なに</rt></ruby>ですか。",
+    p: [
+      "<ruby>日光<rt>にっこう</rt></ruby>",
+      "<ruby>水分<rt>すいぶん</rt></ruby>",
+      "<ruby>気圧<rt>きあつ</rt></ruby>"
+    ],
+    b: 1
+  },
+  {
+    t: "<ruby>細菌<rt>さいきん</rt></ruby>はどのような<ruby>環境<rt>かんきょう</rt></ruby>で<ruby>芽胞<rt>がほう</rt></ruby>を<ruby>作<rt>つく</rt></ruby>りますか。",
+    p: [
+      "<ruby>高温<rt>こうおん</rt></ruby>で<ruby>湿度<rt>しつど</rt></ruby>がたかい<ruby>環境<rt>かんきょう</rt></ruby>",
+      "<ruby>熱<rt>ねつ</rt></ruby>や<ruby>乾燥<rt>かんそう</rt></ruby>などで<ruby>細菌<rt>さいきん</rt></ruby>が<ruby>育<rt>そだ</rt></ruby>ちにくい<ruby>環境<rt>かんきょう</rt></ruby>",
+      "<ruby>水分<rt>すいぶん</rt></ruby>が<ruby>豊富<rt>ほうふ</rt></ruby>な<ruby>環境<rt>かんきょう</rt></ruby>"
+    ],
+    b: 1
+  },
+  {
+    t: "<ruby>微生物<rt>びせいぶつ</rt></ruby>が<ruby>急速<rt>きゅうそく</rt></ruby>に<ruby>増殖<rt>ぞうしょく</rt></ruby>する<ruby>温度<rt>おんど</rt></ruby>はどれですか。",
+    p: [
+      "4℃<ruby>以下<rt>いか</rt></ruby>",
+      "60℃<ruby>以上<rt>いじょう</rt></ruby>",
+      "30℃～40℃"
+    ],
+    b: 2
+  },
+  {
+    t: "<ruby>作業服<rt>さぎょうふく</rt></ruby>について<ruby>何<rt>なに</rt></ruby>を<ruby>注意<rt>ちゅうい</rt></ruby>しなければなりませんか。<ruby>間違<rt>まちが</rt></ruby>っているものを<ruby>一<rt>ひと</rt></ruby>つ<ruby>選<rt>えら</rt></ruby>びなさい。",
+    p: [
+      "ポケットやボタンがついている<ruby>服<rt>ふく</rt></ruby>を<ruby>着<rt>き</rt></ruby>る",
+      "<ruby>汚<rt>よご</rt></ruby>れない<ruby>作業服<rt>さぎょうふく</rt></ruby>と<ruby>汚<rt>よご</rt></ruby>れた<ruby>作業服<rt>さぎょうふく</rt></ruby>がロッカーでくっつかないようにする",
+      "<ruby>上着<rt>うわぎ</rt></ruby>のすそをズボンに<ruby>入<rt>い</rt></ruby>れる"
+    ],
+    b: 0
+  },
+  {
+    t: "<ruby>作業<rt>さぎょう</rt></ruby>する<ruby>前<rt>まえ</rt></ruby>に<ruby>何<rt>なに</rt></ruby>を<ruby>確認<rt>かくにん</rt></ruby>しなければなりませんか。",
+    p: [
+      "<ruby>作業<rt>さぎょう</rt></ruby><ruby>場所<rt>ばしょ</rt></ruby>と<ruby>作業<rt>さぎょう</rt></ruby><ruby>内容<rt>ないよう</rt></ruby>",
+      "<ruby>一緒<rt>いっしょ</rt></ruby>に<ruby>働<rt>はたら</rt></ruby>く<ruby>人<rt>ひと</rt></ruby>の<ruby>名前<rt>なまえ</rt></ruby>",
+      "<ruby>消毒<rt>しょうどく</rt></ruby><ruby>液<rt>えき</rt></ruby>の<ruby>置<rt>お</rt></ruby>く<ruby>場所<rt>ばしょ</rt></ruby>"
+    ],
+    b: 0
+  },
+  {
+    t: "<ruby>作業<rt>さぎょう</rt></ruby><ruby>中<rt>ちゅう</rt></ruby>の<ruby>注意<rt>ちゅうい</rt></ruby><ruby>点<rt>てん</rt></ruby>について、<ruby>間違<rt>まちが</rt></ruby>っているものを<ruby>一<rt>ひと</rt></ruby>つ<ruby>選<rt>えら</rt></ruby>びなさい。",
+    p: [
+      "<ruby>危険<rt>きけん</rt></ruby><ruby>箇所<rt>かしょ</rt></ruby>を<ruby>見<rt>み</rt></ruby>つけたら、すぐ<ruby>責任<rt>せきにん</rt></ruby><ruby>者<rt>しゃ</rt></ruby>に<ruby>報告<rt>ほうこく</rt></ruby>する",
+      "<ruby>時間<rt>じかん</rt></ruby>があったら<ruby>作業<rt>さぎょう</rt></ruby><ruby>場<rt>ば</rt></ruby>で<ruby>一緒<rt>いっしょ</rt></ruby>に<ruby>仕事<rt>しごと</rt></ruby>をする<ruby>人<rt>ひと</rt></ruby>と<ruby>話<rt>はな</rt></ruby>す",
+      "<ruby>周<rt>まわ</rt></ruby>りの<ruby>人<rt>ひと</rt></ruby>が<ruby>危険<rt>きけん</rt></ruby>な<ruby>働<rt>はたら</rt></ruby>きをしたら<ruby>注意<rt>ちゅうい</rt></ruby>する"
+    ],
+    b: 1
+  },
+  {
+    t: "<ruby>作業<rt>さぎょう</rt></ruby><ruby>後<rt>ご</rt></ruby>に<ruby>行<rt>おこな</rt></ruby>う<ruby>後片付<rt>あとかたづ</rt></ruby>けで、<ruby>間違<rt>まちが</rt></ruby>っているものを<ruby>一<rt>ひと</rt></ruby>つ<ruby>選<rt>えら</rt></ruby>びなさい。",
+    p: [
+      "<ruby>作業<rt>さぎょう</rt></ruby><ruby>場<rt>ば</rt></ruby>の<ruby>清掃<rt>せいそう</rt></ruby>も<ruby>決<rt>き</rt></ruby>められたとおりに<ruby>行<rt>おこな</rt></ruby>い、いつも<ruby>清潔<rt>せいけつ</rt></ruby>にする",
+      "<ruby>使<rt>つか</rt></ruby>った<ruby>機械<rt>きかい</rt></ruby>、<ruby>道具<rt>どうぐ</rt></ruby>などは、<ruby>明日<rt>あした</rt></ruby>すぐ<ruby>使<rt>つか</rt></ruby>えるようにそのままにしておく",
+      "<ruby>汚<rt>よご</rt></ruby>れた<ruby>作業<rt>さぎょう</rt></ruby><ruby>着<rt>ぎ</rt></ruby>は、かならず<ruby>洗濯<rt>せんたく</rt></ruby>する"
+    ],
+    b: 1
+  },
+  {
+    t: "「5S<ruby>活動<rt>かつどう</rt></ruby>」のうち、<ruby>整理<rt>せいり</rt></ruby>・<ruby>整頓<rt>せいとん</rt></ruby>・<ruby>清掃<rt>せいそう</rt></ruby>・<ruby>習慣<rt>しゅうかん</rt></ruby>に<ruby>加<rt>くわ</rt></ruby>えて、もう<ruby>一<rt>ひと</rt></ruby>つは<ruby>何<rt>なに</rt></ruby>ですか。",
+    p: [
+      "<ruby>清潔<rt>せいけつ</rt></ruby>",
+      "<ruby>湿気<rt>しっけ</rt></ruby>",
+      "<ruby>掃除<rt>そうじ</rt></ruby>"
+    ],
+    b: 0
+  },
+  {
+    t: "HACCPにおいて<ruby>作業<rt>さぎょう</rt></ruby><ruby>場<rt>ば</rt></ruby>に<ruby>任<rt>まか</rt></ruby>されている<ruby>重要<rt>じゅうよう</rt></ruby>なことは<ruby>何<rt>なに</rt></ruby>ですか。<ruby>間違<rt>まちが</rt></ruby>っているものを<ruby>一<rt>ひと</rt></ruby>つ<ruby>選<rt>えら</rt></ruby>びなさい。",
+    p: [
+      "モニタリング<ruby>結果<rt>けっか</rt></ruby>を<ruby>知<rt>し</rt></ruby>る",
+      "<ruby>管理<rt>かんり</rt></ruby><ruby>基準<rt>きじゅん</rt></ruby>の<ruby>設定<rt>せってい</rt></ruby><ruby>値<rt>ち</rt></ruby>を<ruby>知<rt>し</rt></ruby>る",
+      "<ruby>重要<rt>じゅうよう</rt></ruby><ruby>管理<rt>かんり</rt></ruby><ruby>点<rt>てん</rt></ruby>を<ruby>監視<rt>かんし</rt></ruby>する"
+    ],
+    b: 0
+  },
+  {
+    t: "<ruby>新型<rt>しんがた</rt></ruby>コロナウイルス<ruby>感染<rt>かんせん</rt></ruby><ruby>症<rt>しょう</rt></ruby>の<ruby>予防<rt>よぼう</rt></ruby><ruby>方法<rt>ほうほう</rt></ruby>「3つの<ruby>密<rt>みつ</rt></ruby>」のうち、「<ruby>密閉<rt>みっぺい</rt></ruby>」「<ruby>密接<rt>みっせつ</rt></ruby>」ともう<ruby>一<rt>ひと</rt></ruby>つは<ruby>何<rt>なに</rt></ruby>ですか。",
+    p: [
+      "<ruby>密集<rt>みっしゅう</rt></ruby>",
+      "<ruby>密偵<rt>みってい</rt></ruby>",
+      "<ruby>密告<rt>みっこく</rt></ruby>"
+    ],
+    b: 0
+  },
+  {
+    t: "<ruby>食品<rt>しょくひん</rt></ruby><ruby>衛生<rt>えいせい</rt></ruby><ruby>法<rt>ほう</rt></ruby>の<ruby>規定<rt>きてい</rt></ruby>では、<ruby>冷蔵庫<rt>れいぞうこ</rt></ruby>の<ruby>基準<rt>きじゅん</rt></ruby><ruby>温度<rt>おんど</rt></ruby>はどれですか。",
+    p: [
+      "4℃<ruby>以下<rt>いか</rt></ruby>",
+      "10℃<ruby>以下<rt>いか</rt></ruby>",
+      "15℃<ruby>以下<rt>いか</rt></ruby>"
+    ],
+    b: 1
+  },
+  {
+    t: "<ruby>鉄<rt>てつ</rt></ruby>を<ruby>見<rt>み</rt></ruby>つけることができる<ruby>機械<rt>きかい</rt></ruby>として、<ruby>正<rt>ただ</rt></ruby>しいものを<ruby>一<rt>ひと</rt></ruby>つ<ruby>選<rt>えら</rt></ruby>びなさい。",
+    p: [
+      "<ruby>温度<rt>おんど</rt></ruby><ruby>計<rt>けい</rt></ruby>",
+      "<ruby>日付<rt>ひづけ</rt></ruby><ruby>検査<rt>けんさ</rt></ruby><ruby>機<rt>き</rt></ruby>",
+      "<ruby>金属<rt>きんぞく</rt></ruby><ruby>検出<rt>けんしゅつ</rt></ruby><ruby>機<rt>き</rt></ruby>"
+    ],
+    b: 2
+  },
+  {
+    t: "<ruby>石<rt>いし</rt></ruby>やガラスなどを<ruby>検査<rt>けんさ</rt></ruby>する<ruby>機械<rt>きかい</rt></ruby>はどれですか。",
+    p: [
+      "<ruby>金属<rt>きんぞく</rt></ruby><ruby>検出<rt>けんしゅつ</rt></ruby><ruby>器<rt>き</rt></ruby>",
+      "X<ruby>線<rt>せん</rt></ruby><ruby>異物<rt>いぶつ</rt></ruby><ruby>検出<rt>けんしゅつ</rt></ruby><ruby>器<rt>き</rt></ruby>",
+      "<ruby>金属<rt>きんぞく</rt></ruby><ruby>検出<rt>けんしゅつ</rt></ruby><ruby>器<rt>き</rt></ruby>とX<ruby>線<rt>せん</rt></ruby><ruby>異物<rt>いぶつ</rt></ruby><ruby>検出<rt>けんしゅつ</rt></ruby><ruby>器<rt>き</rt></ruby>"
+    ],
+    b: 1
+  },
+  {
+    t: "<ruby>主<rt>おも</rt></ruby>な<ruby>冷却<rt>れいきゃく</rt></ruby><ruby>方法<rt>ほうほう</rt></ruby>はどれですか。<ruby>間違<rt>まちが</rt></ruby>っているものを<ruby>一<rt>ひと</rt></ruby>つ<ruby>選<rt>えら</rt></ruby>びなさい。",
+    p: [
+      "<ruby>風<rt>かぜ</rt></ruby>をあてて<ruby>冷<rt>ひ</rt></ruby>やす<ruby>方法<rt>ほうほう</rt></ruby>",
+      "<ruby>冷水<rt>れいすい</rt></ruby>で<ruby>冷<rt>ひ</rt></ruby>やす<ruby>方法<rt>ほうほう</rt></ruby>",
+      "<ruby>製氷<rt>せいひょう</rt></ruby><ruby>機<rt>き</rt></ruby>に<ruby>入<rt>い</rt></ruby>れて<ruby>冷<rt>ひ</rt></ruby>やす<ruby>方法<rt>ほうほう</rt></ruby>"
+    ],
+    b: 2
+  },
+  {
+    t: "<ruby>微生物<rt>びせいぶつ</rt></ruby>の<ruby>増殖<rt>ぞうしょく</rt></ruby>を<ruby>防<rt>ふせ</rt></ruby>ぐために、<ruby>何<rt>なに</rt></ruby>をるすべきですか。<ruby>間違<rt>まちが</rt></ruby>っているものを<ruby>選<rt>えら</rt></ruby>びなさい。",
+    p: [
+      "<ruby>定期<rt>ていき</rt></ruby><ruby>探<rt>てき</rt></ruby><ruby>的<rt>てき</rt></ruby>に<ruby>冷蔵庫<rt>れいぞうこ</rt></ruby>、<ruby>冷凍庫<rt>れいとうこ</rt></ruby>の<ruby>温度<rt>おんど</rt></ruby>を<ruby>測定<rt>そくてい</rt></ruby>する",
+      "<ruby>加熱<rt>かねつ</rt></ruby>した<ruby>食品<rt>しょくひん</rt></ruby>をゆっくり<ruby>冷<rt>ひ</rt></ruby>やす",
+      "<ruby>加熱<rt>かねつ</rt></ruby>した<ruby>後<rt>あと</rt></ruby>の<ruby>食品<rt>しょくひん</rt></ruby>をできるだけ<ruby>速<rt>はや</rt></ruby>く<ruby>冷<rt>ひ</rt></ruby>やす"
+    ],
+    b: 1
+  },
+  {
+    t: "アレルギーの<ruby>発症<rt>はっしょう</rt></ruby><ruby>件数<rt>けんすう</rt></ruby>が<ruby>特<rt>とく</rt></ruby>に<ruby>多<rt>おお</rt></ruby>い8<ruby>種類<rt>しゅるい</rt></ruby>の<ruby>食品<rt>しょくひん</rt></ruby>（<ruby>特定<rt>とくてい</rt></ruby><ruby>原材料<rt>げんざいりょう</rt></ruby>）はどれですか。",
+    p: [
+      "そば、たまご、<ruby>落花生<rt>らっかせい</rt></ruby>、<ruby>小麦<rt>こむぎ</rt></ruby>、<ruby>玉<rt>たま</rt></ruby>ねぎ、えび、<ruby>牛肉<rt>ぎゅうにく</rt></ruby>、くるみ",
+      "えび、かに、<ruby>牡蠣<rt>かき</rt></ruby>、にんじん、<ruby>牛肉<rt>ぎゅうにく</rt></ruby>、りんご、オレンジ、くるみ",
+      "えび、かに、<ruby>小麦<rt>こむぎ</rt></ruby>、そば、たまご、<ruby>乳<rt>にゅう</rt></ruby>、<ruby>落花生<rt>らっかせい</rt></ruby>、くるみ"
+    ],
+    b: 2
+  },
+  {
+    t: "<ruby>薬剤<rt>やくざい</rt></ruby>の<ruby>管理<rt>かんり</rt></ruby>について、<ruby>間違<rt>まちが</rt></ruby>っているものを<ruby>一<rt>ひと</rt></ruby>つ<ruby>選<rt>えら</rt></ruby>びなさい。",
+    p: [
+      "どこで<ruby>保管<rt>ほかん</rt></ruby>してもいい",
+      "<ruby>薬剤<rt>やくざい</rt></ruby>の<ruby>使用<rt>しよう</rt></ruby><ruby>量<rt>りょう</rt></ruby>や<ruby>残<rt>のこ</rt></ruby>った<ruby>量<rt>りょう</rt></ruby>を<ruby>入出庫<rt>にゅうしゅっこ</rt></ruby><ruby>台帳<rt>だいちょう</rt></ruby>に<ruby>書<rt>か</rt></ruby>いて<ruby>記録<rt>きろく</rt></ruby>する",
+      "<ruby>薬剤<rt>やくざい</rt></ruby>の<ruby>容器<rt>ようき</rt></ruby>は<ruby>必<rt>かなら</rt></ruby>ず「<ruby>薬剤<rt>やくざい</rt></ruby><ruby>名<rt>めい</rt></ruby>」「<ruby>使用<rt>しよう</rt></ruby><ruby>方法<rt>ほうほう</rt></ruby>」などを<ruby>書<rt>か</rt></ruby>く"
+    ],
+    b: 0
+  },
+  {
+    t: "<ruby>交差<rt>こうさ</rt></ruby><ruby>汚染<rt>おせん</rt></ruby>の<ruby>防止<rt>ぼうし</rt></ruby>について、<ruby>間違<rt>まちが</rt></ruby>っているものを<ruby>選<rt>えら</rt></ruby>びなさい。",
+    p: [
+      "アレルギー<ruby>食品<rt>しょくひん</rt></ruby>を<ruby>含<rt>ふく</rt></ruby>む<ruby>原材料<rt>げんざいりょう</rt></ruby>は、<ruby>含<rt>ふく</rt></ruby>まない<ruby>原材料<rt>げんざいりょう</rt></ruby>と<ruby>区分<rt>くぶん</rt></ruby>して<ruby>保管<rt>ほかん</rt></ruby>する",
+      "<ruby>特定<rt>とくてい</rt></ruby><ruby>原材料<rt>げんざいりょう</rt></ruby>を<ruby>含<rt>ふく</rt></ruby>む<ruby>製品<rt>せいひん</rt></ruby>を<ruby>製造<rt>せいぞう</rt></ruby>する<ruby>場合<rt>ばあい</rt></ruby>は、<ruby>一日<rt>いちにち</rt></ruby>の<ruby>始<rt>はじ</rt></ruby>めに<ruby>製造<rt>せいぞう</rt></ruby>する",
+      "アレルギー<ruby>食品<rt>しょくひん</rt></ruby>を<ruby>含<rt>ふく</rt></ruby>む<ruby>製品<rt>せいひん</rt></ruby>と<ruby>含<rt>ふく</rt></ruby>まない<ruby>製品<rt>せいひん</rt></ruby>を<ruby>同<rt>おな</rt></ruby>じラインで<ruby>製造<rt>せいぞう</rt></ruby>する<ruby>時<rt>とき</rt></ruby>、<ruby>洗浄<rt>せんじょう</rt></ruby>を<ruby>徹底<rt>てってい</rt></ruby>する"
+    ],
+    b: 1
+  },
+  {
+    t: "ノロウイルスによる<ruby>食中毒<rt>しょくちゅうどく</rt></ruby>を<ruby>防<rt>ふせ</rt></ruby>ぐための4つの<ruby>重要<rt>じゅうよう</rt></ruby>なポイントはどれですか。",
+    p: [
+      "<ruby>作業<rt>さぎょう</rt></ruby><ruby>者<rt>しゃ</rt></ruby>を<ruby>隔離<rt>かくり</rt></ruby>する、<ruby>食材<rt>しょくざい</rt></ruby>を<ruby>無駄<rt>むだ</rt></ruby>にしない、<ruby>消毒<rt>しょうどく</rt></ruby>する、<ruby>情報<rt>じょうほう</rt></ruby><ruby>提供<rt>ていきょう</rt></ruby>する",
+      "<ruby>病気<rt>びょうき</rt></ruby><ruby>を予防する、<ruby>清掃<rt>せいそう</rt></ruby>をする、<ruby>検査<rt>けんさ</rt></ruby>をする、<ruby>早期<rt>そうき</rt></ruby><ruby>発見<rt>はっけん</rt></ruby>する",
+      "<ruby>持<rt>も</rt></ruby>ち<ruby>込<rt>こ</rt></ruby>まない、つけない、やっつける、<ruby>拡<rt>ひろ</rt></ruby>げない"
+    ],
+    b: 2
+  },
+  {
+    t: "<ruby>食品<rt>しょくひん</rt></ruby><ruby>衛生<rt>えいせい</rt></ruby><ruby>管理<rt>かんり</rt></ruby>が<ruby>不十分<rt>ふじゅうぶん</rt></ruby>な<ruby>場合<rt>ばあい</rt></ruby>、<ruby>企業<rt>きぎょう</rt></ruby>はどのような<ruby>影響<rt>えいきょう</rt></ruby>を<ruby>受<rt>う</rt></ruby>けますか。",
+    p: [
+      "<ruby>企業<rt>きぎょう</rt></ruby>の<ruby>信頼<rt>しんらい</rt></ruby><rt>うしな</rt></ruby>う",
+      "<ruby>売上<rt>うりあげ</rt></ruby>が<ruby>上<rt>あ</rt></ruby>がる",
+      "<ruby>生産<rt>せいさん</rt></ruby><ruby>量<rt>りょう</rt></ruby>が<ruby>増<rt>ふ</rt></ruby>える"
+    ],
+    b: 0
+  },
+  {
+    t: "HACCPとは<ruby>何<rt>なに</rt></ruby>をしますか。",
+    p: [
+      "<ruby>微生物<rt>びせいぶつ</rt></ruby><ruby>検査<rt>けんさ</rt></ruby>を<ruby>行<rt>おこな</rt></ruby>うことによって、<ruby>食中毒<rt>しょくちゅうどく</rt></ruby>の<ruby>原因<rt>げんいん</rt></ruby><ruby>菌<rt>きん</rt></ruby>を<ruby>管理<rt>かんり</rt></ruby>する",
+      "X<ruby>線<rt>せん</rt></ruby><ruby>異物<rt>いぶつ</rt></ruby><ruby>検出<rt>けんしゅつ</rt></ruby><ruby>器<rt>き</rt></ruby>を<ruby>使<rt>つか</rt></ruby>って、<ruby>危険<rt>きけん</rt></ruby>な<ruby>異物<rt>いぶつ</rt></ruby>を<ruby>見<rt>み</rt></ruby>つけ<ruby>出<rt>だ</rt></ruby>す",
+      "<ruby>危害<rt>きがい</rt></ruby><ruby>要因<rt>よういん</rt></ruby><ruby>分析<rt>ぶんせき</rt></ruby>を<ruby>行<rt>おこな</rt></ruby>い、<ruby>製造<rt>せいぞう</rt></ruby><ruby>工程<rt>こうてい</rt></ruby><ruby>中<rt>ちゅう</rt></ruby>の<ruby>重要<rt>じゅうよう</rt></ruby><ruby>管理<rt>かんり</rt></ruby><ruby>点<rt>てん</rt></ruby>で<ruby>製品<rt>せいひん</rt></ruby>の<ruby>安全<rt>あんぜん</rt></ruby>を<ruby>確保<rt>かくほ</rt></ruby>する"
+    ],
+    b: 2
+  },
+  {
+    t: "5S<ruby>活動<rt>かつどう</rt></ruby>と<ruby>労働<rt>ろうどう</rt></ruby><ruby>安全<rt>あんぜん</rt></ruby>との<ruby>関係<rt>かんけい</rt></ruby>で、<ruby>間違<rt>まちが</rt></ruby>っている<ruby>組<rt>く</rt></ruby>み<ruby>合<rt>あ</rt></ruby>わせはどれですか。",
+    p: [
+      "<ruby>整理<rt>せいり</rt></ruby>：<ruby>作業<rt>さぎょう</rt></ruby><ruby>効率<rt>こうりつ</rt></ruby>が<ruby>上<rt>あ</rt></ruby>がり、<ruby>転倒<rt>てんとう</rt></ruby><ruby>災害<rt>さいがい</rt></ruby>の<ruby>危険<rt>きけん</rt></ruby>も<ruby>減<rt>へ</rt></ruby>る",
+      "<ruby>清潔<rt>せいけつ</rt></ruby>：<ruby>製品<rt>せいひん</rt></ruby>の<ruby>品質<rt>ひんしつ</rt></ruby><ruby>向上<rt>こうじょう</rt></ruby>、<ruby>食中毒<rt>しょくちゅうどく</rt></ruby><ruby>予防<rt>よぼう</rt></ruby>、<ruby>異物<rt>いぶつ</rt></ruby><ruby>混入<rt>こんにゅう</rt></ruby><ruby>防止<rt>ぼうし</rt></ruby>に<ruby>効果<rt>こうか</rt></ruby>がある",
+      "<ruby>習慣<rt>しゅうかん</rt></ruby>：ムダな<ruby>時間<rt>じかん</rt></ruby>が<ruby>減<rt>へ</rt></ruby>り、<ruby>製品<rt>せいひん</rt></ruby>の<ruby>品質<rt>ひんしつ</rt></ruby>も<ruby>向上<rt>こうじょう</rt></ruby>される"
+    ],
+    b: 2
+  },
+  {
+    t: "<ruby>下<rt>した</rt></ruby>は300gのパンの<ruby>配合<rt>はいごう</rt></ruby><ruby>例<rt>れい</rt></ruby>です。この<ruby>配合<rt>はいごう</rt></ruby>に<ruby>従<rt>したが</rt></ruby>うと、<ruby>小麦<rt>こむぎ</rt></ruby>6kgからどれだけのパンを<ruby>作<rt>つく</rt></ruby>ることができますか。（<ruby>配合<rt>はいごう</rt></ruby>：<ruby>小麦<rt>こむぎ</rt></ruby> 200g、<ruby>食塩<rt>しょくえん</rt></ruby> 20g、<ruby>水<rt>みず</rt></ruby> 80g）",
+    p: [
+      "7kg",
+      "9kg",
+      "11kg"
+    ],
+    b: 1
+  },
+  {
+    t: "「<ruby>転倒<rt>てんとう</rt></ruby>」<ruby>災害<rt>さいがい</rt></ruby><ruby>防止<rt>ぼうし</rt></ruby>のポイントについて、<ruby>正<rt>ただ</rt></ruby>しいものを<ruby>一<rt>ひと</rt></ruby>つ<ruby>選<rt>えら</rt></ruby>びなさい。",
+    p: [
+      "<ruby>大<rt>おお</rt></ruby>きいもの、<ruby>重<rt>おも</rt></ruby>いものを<ruby>持<rt>も</rt></ruby>つときは<ruby>台車<rt>だいしゃ</rt></ruby>を<ruby>使用<rt>しよう</rt></ruby>しましょう",
+      "<ruby>床<rt>ゆか</rt></ruby>は<ruby>常<rt>つね</rt></ruby>に<ruby>濡<rt>ぬ</rt></ruby>れていてもいい",
+      "<ruby>台車<rt>だいしゃ</rt></ruby>を<ruby>使<rt>つか</rt></ruby>えないときは、<ruby>一人<rt>ひとり</rt></ruby>で<ruby>無理<rt>むり</rt></ruby>をして<ruby>運<rt>はこ</rt></ruby>る"
+    ],
+    b: 0
+  },
+  {
+    t: "<ruby>腰痛<rt>ようつう</rt></ruby><ruby>症<rt>しょう</rt></ruby><ruby>災害<rt>さいがい</rt></ruby><ruby>防止<rt>ぼうし</rt></ruby>のポイントについて、<ruby>間違<rt>まちが</rt></ruby>っているものを<ruby>一<rt>ひと</rt></ruby>つ<ruby>選<rt>えら</rt></ruby>びなさい。",
+    p: [
+      "<ruby>片足<rt>かたあし</rt></ruby>を<ruby>前<rt>まえ</rt></ruby>に<ruby>出<rt>だ</rt></ruby>し<ruby>膝<rt>ひざ</rt></ruby>を<ruby>曲<rt>ま</rt></ruby>げ、<ruby>腰<rt>こし</rt></ruby>を<ruby>十分<rt>じゅうぶん</rt></ruby>におろして<ruby>荷物<rt>にもつ</rt></ruby>を<ruby>抱<rt>かか</rt></ruby>え、<ruby>膝<rt>ひざ</rt></ruby>を<ruby>伸<rt>の</rt></ruby>ばして<ruby>立<rt>た</rt></ruby>つ",
+      "<ruby>重<rt>おも</rt></ruby>いものを<ruby>持<rt>も</rt></ruby>ち<ruby>上<rt>あ</rt></ruby>げる<ruby>時<rt>とき</rt></ruby>はお<ruby>腹<rt>なか</rt></ruby>に<ruby>力<rt>ちから</rt></ruby>を<ruby>入<rt>い</rt></ruby>れず、<ruby>呼吸<rt>こきゅう</rt></ruby>を<ruby>整<rt>ととの</rt></ruby>えて<ruby>行<rt>おこな</rt></ruby>う",
+      "できるだけ<ruby>荷物<rt>にもつ</rt></ruby>に<ruby>体<rt>からだ</rt></ruby>を<ruby>近<rt>ちか</rt></ruby>づけて、<ruby>重心<rt>じゅうしん</rt></ruby>を<ruby>低<rt>ひく</rt></ruby>くする<ruby>姿勢<rt>しせい</rt></ruby>で<ruby>取<rt>と</rt></ruby>り<ruby>扱<rt>あつか</rt></ruby>う"
+    ],
+    b: 1
+  },
+  {
+    t: "<ruby>働<rt>はたら</rt></ruby>いた<ruby>経験<rt>けいけん</rt></ruby>が<ruby>少<rt>すく</rt></ruby>ない<ruby>人<rt>ひと</rt></ruby>たちの<ruby>労働<rt>ろうどう</rt></ruby><ruby>災害<rt>さいがい</rt></ruby>で、<ruby>一番<rt>いちばん</rt></ruby><ruby>多<rt>おお</rt></ruby>いものを<ruby>選<rt>えら</rt></ruby>びなさい。",
+    p: [
+      "<ruby>挟<rt>はさ</rt></ruby>まれ・<ruby>巻<rt>ま</rt></ruby>き<ruby>込<rt>こ</rt></ruby>まれ",
+      "<ruby>転倒<rt>てんとう</rt></ruby>",
+      "<ruby>切<rt>き</rt></ruby>れ・こすれ"
+    ],
+    b: 1
+  },
+  {
+    t: "<ruby>段<rt>だん</rt></ruby>ボール<ruby>箱<rt>ばこ</rt></ruby>を<ruby>重<rt>かさ</rt></ruby>ねて<ruby>持<rt>も</rt></ruby>って<ruby>倉庫<rt>そうこ</rt></ruby>の<ruby>中<rt>なか</rt></ruby>を<ruby>移動<rt>いどう</rt></ruby>したとき、<ruby>坂<rt>さか</rt></ruby>で<ruby>滑<rt>すべ</rt></ruby>りそうになった。この<ruby>場合<rt>ばあい</rt></ruby>はどうすればいいのか、<ruby>正<rt>ただ</rt></ruby>しいものを<ruby>一<rt>ひと</rt></ruby>つ<ruby>選<rt>えら</rt></ruby>びなさい。",
+    img : "https://lh3.googleusercontent.com/d/1OVvgLqhEYlfZvTshxtMrOU4P2378GgZD",
+    p: [
+      "<ruby>作業<rt>さぎょう</rt></ruby><ruby>靴<rt>ぐつ</rt></ruby>は<ruby>定期<rt>ていき</rt></ruby><ruby>的<rt>てき</rt></ruby>に<ruby>点検<rt>てんけん</rt></ruby>し、<ruby>靴底<rt>くつぞこ</rt></ruby>のすり<ruby>減<rt>へ</rt></ruby>った<ruby>作業<rt>さぎょう</rt></ruby><ruby>靴<rt>ぐつ</rt></ruby>は<ruby>交換<rt>こうかん</rt></ruby>する",
+      "<ruby>重<rt>かさ</rt></ruby>ねて<ruby>持<rt>も</rt></ruby>って<ruby>移動<rt>いどう</rt></ruby>するとき、<ruby>作業<rt>さぎょう</rt></ruby><ruby>靴<rt>ぐつ</rt></ruby>を<ruby>履<rt>は</rt></ruby>かない",
+      "<ruby>重<rt>かさ</rt></ruby>ねて<ruby>持<rt>も</rt></ruby>って<ruby>移動<rt>いどう</rt></ruby>するとき、<ruby>前<rt>まえ</rt></ruby>が<ruby>見<rt>み</rt></ruby>えなくても<ruby>急<rt>いそ</rt></ruby>いで<ruby>歩<rt>ある</rt></ruby>く"
+    ],
+    b: 0
+  },
+  {
+    t: "トラックから<ruby>米<rt>こめ</rt></ruby>を<ruby>降<rt>お</rt></ruby>ろそうとして、<ruby>持<rt>も</rt></ruby>ち<ruby>上<rt>あ</rt></ruby>げた<ruby>米袋<rt>こめぶくろ</rt></ruby>を<ruby>肩<rt>かた</rt></ruby>に<ruby>乗<rt>の</rt></ruby>せたところ、<ruby>腰<rt>こし</rt></ruby>をひねって<ruby>痛<rt>いた</rt></ruby>めそうになった。この<ruby>場合<rt>ばあい</rt></ruby>の<ruby>原因<rt>げんいん</rt></ruby>は<ruby>何<rt>なに</rt></ruby>ですか。<ruby>正<rt>ただ</rt></ruby>しいものを<ruby>一<rt>ひと</rt></ruby>つ<ruby>選<rt>えら</rt></ruby>びなさい。",
+    img : "https://lh3.googleusercontent.com/d/1JvbBBUmC3jJv1HmcjEcb4jgmMVZ979Uo",
+    p: [
+      "<ruby>重<rt>おも</rt></ruby>い<ruby>物<rt>もの</rt></ruby>を<ruby>急<rt>きゅう</rt></ruby>に<ruby>持<rt>も</rt></ruby>ち<ruby>上<rt>あ</rt></ruby>げて、<ruby>顔<rt>かお</rt></ruby>に<ruby>乗<rt>の</rt></ruby>せたため",
+      "<ruby>重<rt>おも</rt></ruby>い<ruby>物<rt>もの</rt></ruby>を<ruby>急<rt>きゅう</rt></ruby>に<ruby>持<rt>も</rt></ruby>ち<ruby>上<rt>あ</rt></ruby>げて、<ruby>肩<rt>かた</rt></ruby>の<ruby>上<rt>うえ</rt></ruby>に<ruby>乗<rt>の</rt></ruby>せたため、<ruby>腰<rt>こし</rt></ruby>に<ruby>急<rt>きゅう</rt></ruby>な<ruby>力<rt>ちから</rt></ruby>がかかった",
+      "<ruby>重<rt>おも</rt></ruby>い<ruby>物<rt>もの</rt></ruby>を<ruby>急<rt>きゅう</rt></ruby>に<ruby>持<rt>も</rt></ruby>ち<ruby>上<rt>あ</rt></ruby>げて、<ruby>頭<rt>あたま</rt></ruby>の<ruby>上<rt>うえ</rt></ruby>に<ruby>乗<rt>の</rt></ruby>せたため"
+    ],
+    b: 1
+  },
+  {
+    t: "<ruby>重<rt>おも</rt></ruby>い<ruby>窯<rt>かま</rt></ruby>を<ruby>両手<rt>りょうて</rt></ruby>で<ruby>持<rt>も</rt></ruby>ち<ruby>上<rt>あ</rt></ruby>げた<ruby>際<rt>さい</rt></ruby>、<ruby>腰<rt>こし</rt></ruby>に<ruby>強<rt>つよ</rt></ruby>い<ruby>痛<rt>いた</rt></ruby>みを<ruby>感<rt>かん</rt></ruby>じた。この<ruby>場合<rt>ばあい</rt></ruby>の<ruby>原因<rt>げんいん</rt></ruby>は<ruby>何<rt>なに</rt></ruby>ですか。<ruby>正<rt>ただ</rt></ruby>しいものを<ruby>一<rt>ひと</rt></ruby>つ<ruby>選<rt>えら</rt></ruby>びなさい。",
+    img : "https://lh3.googleusercontent.com/d/14LvfzGWSSIruGNTTTk4H5Qlr_XESPzbb",
+    p: [
+      "<ruby>元気<rt>げんき</rt></ruby>よく<ruby>持<rt>も</rt></ruby>ち<ruby>上<rt>あ</rt></ruby>げようとしたこと",
+      "<ruby>安定<rt>あんてい</rt></ruby>した<ruby>姿勢<rt>しせい</rt></ruby>のまま<ruby>持<rt>も</rt></ruby>ち<ruby>上<rt>あ</rt></ruby>げようとしたこと",
+      "<ruby>不安定<rt>ふあんてい</rt></ruby>な<ruby>姿勢<rt>しせい</rt></ruby>のまま<ruby>持<rt>も</rt></ruby>ち<ruby>上<rt>あ</rt></ruby>げようとしたこと"
+    ],
+    b: 2
+  },
+  {
+    t: "<ruby>問題<rt>もんだい</rt></ruby>37の<ruby>事故<rt>じこ</rt></ruby>を<ruby>防<rt>ふせ</rt></ruby>ぐために、どうしたらいいですか。<ruby>正<rt>ただ</rt></ruby>しいものを<ruby>一<rt>ひと</rt></ruby>つ<ruby>選<rt>えら</rt></ruby>びなさい。",
+    img : "https://lh3.googleusercontent.com/d/14LvfzGWSSIruGNTTTk4H5Qlr_XESPzbb",
+    p: [
+      "<ruby>重<rt>おも</rt></ruby>い<ruby>物<rt>もの</rt></ruby>を<ruby>持<rt>も</rt></ruby>たないようにする",
+      "<ruby>重<rt>おも</rt></ruby>い<ruby>物<rt>もの</rt></ruby>を<ruby>移動<rt>いどう</rt></ruby>させるときは、できるだけ<ruby>台車<rt>だいしゃ</rt></ruby>を<ruby>使用<rt>しよう</rt></ruby>する",
+      "<ruby>重<rt>おも</rt></ruby>い<ruby>物<rt>もの</rt></ruby>を<ruby>移動<rt>いどう</rt></ruby>させるときは、<ruby>常<rt>つね</rt></ruby>に<ruby>走<rt>はし</rt></ruby>って<ruby>運<rt>はこ</rt></ruby>ぶ"
+    ],
+    b: 1
+  },
+  {
+    t: "ロッカーの<ruby>下<rt>した</rt></ruby>を<ruby>清掃<rt>せいそう</rt></ruby>するとき、どうすればいいのか、<ruby>正<rt>ただ</rt></ruby>しいものを<ruby>一<rt>ひと</rt></ruby>つ<ruby>選<rt>えら</rt></ruby>びなさい。",
+    img : "https://lh3.googleusercontent.com/d/1I90zwadeQJC4nFNqiqrLCfLyPw2haqbC",
+    p: [
+      "<ruby>清掃<rt>せいそう</rt></ruby>しにくい<ruby>場所<rt>ばしょ</rt></ruby>がある<ruby>場合<rt>ばあい</rt></ruby>は、<ruby>清掃<rt>せいそう</rt></ruby>しやすくする<ruby>方法<rt>ほうほう</rt></ruby>を<ruby>考<rt>かんが</rt></ruby>える",
+      "<ruby>清掃<rt>せいそう</rt></ruby>しにくい<ruby>場所<rt>ばしょ</rt></ruby>がある<ruby>場合<rt>ばあい</rt></ruby>は、<ruby>掃除<rt>そうじ</rt></ruby>しなくてもいい",
+      "<ruby>清掃<rt>せいそう</rt></ruby>しにくい<ruby>場所<rt>ばしょ</rt></ruby>は、わざと<ruby>物<rt>もの</rt></ruby>を<ruby>置<rt>お</rt></ruby>いて<ruby>隠<rt>かく</rt></ruby>す"
+    ],
+    b: 0
+  },
+  {
+    t: "<ruby>濃度<rt>のうど</rt></ruby>10％のNaClO<ruby>溶液<rt>ようえき</rt></ruby>があります。これを<ruby>使<rt>つか</rt></ruby>って100ppmのNaClO<ruby>溶液<rt>ようえき</rt></ruby>を2L<ruby>作<rt>つく</rt></ruby>るのに、<ruby>原液<rt>げんえき</rt></ruby>と<ruby>水<rt>みず</rt></ruby>の<ruby>量<rt>りょう</rt></ruby>はどれですか。",
+    p: [
+      "<ruby>溶液<rt>ようえき</rt></ruby>4ml、<ruby>水<rt>みず</rt></ruby>1996ml",
+      "<ruby>溶液<rt>ようえき</rt></ruby>2ml、<ruby>水<rt>みず</rt></ruby>1998ml",
+      "<ruby>溶液<rt>ようえき</rt></ruby>4ml、<ruby>水<rt>みず</rt></ruby>1998ml"
+    ],
+    b: 1
+  }
+];
+
+const paket6 = []; const paket7 = []; // Isi sesuai kebutuhan
 const paket8 = []; const paket9 = [];
 const paket10 = [];
 
