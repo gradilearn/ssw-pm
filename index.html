@@ -4,7 +4,7 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CBT SSW FULL SYSTEM</title>
-  <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
 
 </head>
 
@@ -1038,12 +1038,36 @@ function startTimer() {
 
 function finishUjian() {
   let belum = jawaban.filter(x => x === undefined).length;
-  if (confirm(belum > 0 ? `Masih ada ${belum} soal belum dijawab. Selesai?` : "Selesai ujian?")) end();
+  let pesan = belum > 0 ? `Masih ada ${belum} soal belum dijawab. Selesai?` : "Selesai ujian?";
+
+  if (confirm(pesan)) {
+    end(); // Menghitung skor akhir (0-100)
+
+    // Logika Kelulusan: Skor Minimal 70
+    if (skor >= 70) {
+      selebrasiLulus();
+      
+      let statusElement = document.getElementById("status-kelulusan");
+      if (statusElement) {
+        statusElement.innerHTML = "PASSED 🎉";
+        statusElement.className = "text-lulus"; // Mengaktifkan animasi CSS
+      }
+    } else {
+      // Jika di bawah 70 (FAILED)
+      let statusElement = document.getElementById("status-kelulusan");
+      if (statusElement) {
+        statusElement.innerHTML = "FAILED";
+        statusElement.style.color = "#e74c3c";
+        statusElement.className = ""; // Menghapus animasi jika tidak lulus
+      }
+    }
+  }
 }
 
 function end() {
   sedangUjian = false;
   clearInterval(timer);
+  
   let benar = 0, salah = 0, kosong = 0;
   soal.forEach((s, i) => {
     if (jawaban[i] === s.b) benar++;
@@ -1051,26 +1075,45 @@ function end() {
     else salah++;
   });
 
-  let totalSkor = Math.round((benar / soal.length) * 250);
-  let persentase = Math.round((benar / soal.length) * 100);
-  let statusColor = persentase >= 66 ? "#2ecc71" : "#e74c3c";
+  // Perhitungan skor (0-100)
+  let totalSkor = Math.round((benar / soal.length) * 100);
+  // Status lulus jika skor >= 70
+  let statusColor = totalSkor >= 70 ? "#2ecc71" : "#e74c3c";
+
+  // Reset Background Body ke Gambar Utama agar seragam
+  const bgStyle = "linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url('depan.BG.png')";
+  document.body.style.background = bgStyle;
+  document.body.style.backgroundSize = "cover";
+  document.body.style.backgroundAttachment = "fixed";
 
   const layarHasil = document.getElementById("hasil");
   layarHasil.style.display = "flex";
-  layarHasil.innerHTML = `
   
-    <div style="font-size: 20px; padding: 30px; border-radius: 20px; background: white; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.2); width: 75%; max-width: 420px;">
-      <h1>HASIL UJIAN</h1>
-      <div style="font-size: 50px; font-weight: bold; color: #2980b9;">${totalSkor}/250</div>
-      <div style="font-size: 24px; margin-bottom: 20px;">${persentase}%</div>
-      <div style="font-size: 20px; text-align: center; background: #f8f9fa; padding: 15px; border-radius: 10px; margin-bottom: 25px;">
-        Benar: <b style="color:#2ecc71">${benar}</b> | Salah: <b style="color:#e74c3c">${salah}</b> | Tidak Terjawab: <b style="color:#e74c3c">${kosong}</b>
+  // Set background container hasil agar sama dengan body
+  layarHasil.style.background = bgStyle;
+  layarHasil.style.backgroundSize = "cover";
+
+  layarHasil.innerHTML = `
+    <div style="font-size: 20px; padding: 30px; border-radius: 25px; background: rgba(255, 255, 255, 0.95); text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.2); width: 85%; max-width: 420px; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);">
+      <h1 style="color: #2c3e50; margin-bottom: 10px; font-size: 24px;">HASIL UJIAN</h1>
+      
+      <div style="font-size: 80px; font-weight: bold; color: #2980b9; margin: 10px 0; line-height: 1;">${totalSkor}</div>
+      
+      <div style="font-size: 16px; text-align: center; background: #f8f9fa; padding: 15px; border-radius: 15px; margin-bottom: 25px; display: flex; justify-content: space-around; border: 1px solid #eee;">
+        <div style="flex: 1;"><small style="color: #7f8c8d;">BENAR</small><br><b style="color:#2ecc71; font-size: 18px;">${benar}</b></div>
+        <div style="flex: 1; border-left: 1px solid #eee; border-right: 1px solid #eee;"><small style="color: #7f8c8d;">SALAH</small><br><b style="color:#e74c3c; font-size: 18px;">${salah}</b></div>
+        <div style="flex: 1;"><small style="color: #7f8c8d;">KOSONG</small><br><b style="color:#95a5a6; font-size: 18px;">${kosong}</b></div>
       </div>
-      <h2 style="font-size: 40px; letter-spacing: 2px; color: ${statusColor};">${persentase >= 66 ? "PASSED 🎉" : "FAILED"}</h2>
-      <button class="btn" onclick="location.reload()" style="width:80%; margin: 0 auto; display: block; margin-bottom:10px;">KEMBALI KE BERANDA</button>
-      <button class="btn" onclick="tampilkanReview()" style="width:80%; margin: 0 auto; display: block; background:#3498db;">REVIEW JAWABAN</button>
+
+      <h2 style="font-size: 32px; letter-spacing: 2px; color: ${statusColor}; margin-bottom: 25px; font-weight: bold;">
+        ${totalSkor >= 70 ? "PASSED 🎉" : "FAILED"}
+      </h2>
+
+      <button class="btn" onclick="location.reload()" style="width:100%; margin-bottom:12px; height: 45px; cursor: pointer;">KEMBALI KE BERANDA</button>
+      <button class="btn" onclick="tampilkanReview()" style="width:100%; background:#3498db; height: 45px; cursor: pointer;">REVIEW JAWABAN</button>
     </div>
   `;
+
     document.body.style.background = "linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url('depan.BG.png')";
     document.body.style.backgroundSize = "depan.BG";
     document.body.style.backgroundAttachment = "fixed";
@@ -1126,7 +1169,42 @@ window.addEventListener('beforeunload', function (e) {
         return pesan;
     }
 });
+function selebrasiLulus() {
+  const audio = document.getElementById("suaraLulus");
+  if (audio) {
+    audio.currentTime = 0;
+    audio.play().catch(e => console.log("Suara terhambat: ", e));
+  }
+
+  if (typeof confetti === 'function') {
+    const count = 200;
+    const defaults = {
+      origin: { y: 0.7 },
+      zIndex: 10000
+    };
+
+    function fire(particleRatio, opts) {
+      confetti({
+        ...defaults,
+        ...opts,
+        particleCount: Math.floor(count * particleRatio)
+      });
+    }
+
+    fire(0.25, { spread: 26, startVelocity: 55 });
+    fire(0.2, { spread: 60 });
+    fire(0.35, { spread: 100, decay: 0.91, scalar: 0.8 });
+    fire(0.1, { spread: 120, startVelocity: 25, decay: 0.92, scalar: 1.2 });
+    fire(0.1, { spread: 120, startVelocity: 45 });
+  } else {
+    console.error("Library Confetti belum dimuat.");
+  }
+}
+
+// 3. Pastikan penutup script rapi
 </script>
 
+<audio id="suaraLulus" src="https://assets.mixkit.co/active_storage/sfx/1435/1435-preview.mp3"></audio>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
 </body>
 </html>
