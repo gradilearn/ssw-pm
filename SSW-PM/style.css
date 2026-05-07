@@ -1,0 +1,381 @@
+
+  body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  /* Ganti 'background.jpg' dengan nama file gambar yang bby upload ke GitHub */
+  background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), 
+              url('depan.BG.png'); 
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+/* HEADER */
+.header {
+  /* Warna biru transparan */
+  background: rgba(9, 69, 143, 0.9);
+
+  color: white;
+  padding: 1px 20px;
+  text-align: center;
+
+  /* Agar logo bisa diatur */
+  position: relative;
+
+  min-height: 30px;
+
+  /* Efek glass */
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+
+  /* Border tipis transparan */
+  border: 1px solid rgba(255,255,255,0.9);
+
+  /* Shadow lembut */
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+
+/* HEADER UTAMA */
+#main-header {
+
+  /* Biru transparan */
+  background: rgba(16, 100, 204, 0.5);
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  position: relative;
+  min-height: 30px;
+
+  /* Tengah horizontal & vertikal */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  /* Efek kaca */
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+
+  /* Border glass */
+  border: 1px solid rgba(255,255,255,0.1);
+
+  /* Shadow lembut */
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+/* LOGO (Hanya muncul di halaman depan) */
+#logo-utama {
+  position: absolute;  /* Absolute agar tidak memakan space saat muncul */
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 80px;
+  width: auto;
+}
+@media (max-width: 768px) {
+  #logo-utama {
+    height: 20px; /* Ukuran mengecil jadi setengahnya saat di HP */
+    left: 10px;
+  }
+}
+
+/* TULISAN SIMULASI (Halaman 1 & 2) */
+#header-sub {
+  margin-bottom: 4px;
+  padding: 0;
+  width: 100%; /* Memastikan teks punya ruang penuh untuk di-center */
+  font-size: 18px;
+  font-weight: normal;
+}
+
+/* JUDUL WELCOME */
+#header-text {
+  margin: 0 0 4px 0; /* Jarak bawah hanya ada jika WELCOME muncul */
+}
+
+.header h1 {
+  margin-top: 7px;
+  font-size: 40px;
+  letter-spacing: 3px;
+  margin-bottom: 1px;
+}
+
+.header p {
+  margin-top: 1px;
+  font-size: 20px;
+  color: #ffffff;
+  opacity: 1.0;
+}
+/* HOME CARD */
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 20px;
+}
+
+/* TITLE */
+.main-title {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.sub-title {
+  font-size: 30px;
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.line {
+  width: 75%;
+  height: 4px;
+  margin: 20px auto;
+  background: linear-gradient(to right, #74b9ff, #f3719f);
+  border-radius: 5px;
+}
+
+/* PAKET */
+.pilih-title {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+/* BUTTON PINK */
+.button-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  /* Tambahkan padding di container agar tombol tidak mepet ke dinding layar */
+  padding: 20px;
+  /* Jarak horizontal antar tombol */
+  gap: 15px; 
+}
+
+.btn {
+  background: #ff6ca0;
+  color: white;
+  border: none;
+  
+  /* UKURAN HARUS SAMA BESAR */
+  width: 110px; 
+  height: 40px;
+  
+  /* SOLUSI JARAK ATAS-BAWAH: */
+  /* Jika row-gap tidak jalan, margin ini akan memaksanya */
+  margin-bottom: 0px; 
+  
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 15px;
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.3);
+  transition: 0.2s;
+
+  /* Memastikan teks di tengah */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.btn:hover {
+  background: #e84393;
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* CBT Layout */
+.container { display: flex; min-height: 85vh; }
+
+.sidebar-wrapper { 
+  width: 180px; 
+  background: #ecf0f1; 
+  padding: 10px; 
+  border-right: 1px solid #ddd; 
+}
+.sidebar-title { background: #2c3e50; color: white; padding: 10px; text-align: center; border-radius: 5px; margin-bottom: 15px; font-weight: bold; font-size: 13px; }
+.progress-container { width: 100%; height: 8px; background: #ddd; border-radius: 10px; margin-bottom: 15px; overflow: hidden; }
+.progress-bar { height: 100%; width: 0%; background: #2ecc71; transition: 0.3s; }
+
+.sidebar { 
+  display: grid; 
+  grid-template-columns: repeat(5, 1fr); 
+  gap: 4px; 
+}
+
+.nomor { 
+  background: #bdc3c7; 
+  padding: 6px 0; 
+  text-align: center; 
+  border-radius: 3px; 
+  cursor: pointer; 
+  font-size: 13px; 
+  font-weight: bold;
+  min-height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sudah { background: #2ecc71; color: white; }
+.aktifNomor { background: #3498db; color: white; border: 1px solid #2c3e50; }
+
+/* Konten Soal */
+#timer { font-size: 24px; margin-bottom: 15px; font-weight: bold;text-align: right; color: #2c3e50; }
+.timer-habis { color: #e74c3c !important; }
+
+.soal { 
+  font-size: 30px; 
+  margin-bottom: 35px; 
+  line-height: 2; 
+  color: #000000; 
+}
+
+ruby rt { font-size: 0.6em; }
+
+#soal ruby rt {
+  font-size: 17px;
+  color: #2c2c2c;
+  margin-bottom: 3px;
+}
+
+.pilihan ruby rt {
+  font-size: 18px;
+  color: #202020;
+  margin-bottom: 3px;
+}
+
+.pilihan {
+  width: 100%;
+  padding: 18px;
+  margin: 10px 0;
+  text-align: left;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background: #fff;
+  cursor: pointer;
+  font-size: 24px; 
+  display: flex;
+  align-items: flex-start;
+  transition: 0.2s;
+}
+.pilihan:hover { background: #f1f2f6; border-color: #3498db; }
+.aktif { background: #d0e6ff !important; border: 2px solid #3498db !important; font-weight: bold; }
+.label-opsi { font-weight: bold; margin-right: 20px; min-width: 30px; color: #2980b9; }
+
+#hasil {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    
+    /* Background gambar dengan overlay agar tidak terlalu terang */
+    background: linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.1)), 
+                url('depan.BG.png') no-repeat center center fixed;
+    background-size: cover;
+    
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    /* Blur tambahan untuk latar belakang */
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+#hasil > div:first-child {
+    background: rgba(255, 255, 255, 0.7) !important; 
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    max-width: 600px;
+    width: 90%;
+    text-align: center;
+}
+
+#gambarSoal img {
+  max-width: 450px;
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* CBT SKOR */
+.review-item {
+  text-align: left;
+
+  padding: 20px;
+
+  margin-bottom: 15px;
+
+  border-radius: 20px;
+
+  background: rgba(255,255,255,0.02) !important;
+
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  border: 1px solid rgba(255,255,255,0.08);
+}
+.status-benar { color: #2ecc71; font-weight: bold; }
+.status-salah { color: #e74c3c; font-weight: bold; }
+.kunci-jawaban { background: #e8f5e9; padding: 10px; border-radius: 5px; margin-top: 5px; font-size: 0.9em; }
+
+.sidebar-wrapper {
+  transition: all 0.3s ease; /* Biar gerakannya mulus */
+  overflow: hidden;
+}
+
+.sidebar-tutup {
+  width: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Memastikan konten soal mengambil sisa ruang */
+.content {
+  flex: 1;
+  padding: 40px;
+
+  background: transparent !important;
+
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+}
+#hasil .content {
+  background: rgba(255,255,255,0.03) !important;
+
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  border-radius: 20px;
+
+  border: 1px solid rgba(255,255,255,0.1);
+}
+.card-home {
+  /* Transparansi 70% agar gambar belakang terlihat jelas */
+  background: rgba(255, 255, 255, 0.021);  
+  /* Efek Kaca Blur */
+  backdrop-filter: blur(15px); 
+  -webkit-backdrop-filter: blur(15px);
+
+  padding: 40px 30px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 800px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
