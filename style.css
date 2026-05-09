@@ -226,8 +226,51 @@
 .sudah { background: #2ecc71; color: white; }
 .aktifNomor { background: #3498db; color: white; border: 1px solid #2c3e50; }
 
-/* Konten Soal */
-#timer { font-size: 24px; margin-bottom: 15px; font-weight: bold;text-align: right; color: #2c3e50; }
+/* Container untuk membungkus Timer dan Tombol agar sejajar */
+.timer-wrapper {
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center;
+    gap: 5px; /* <--- Ubah dari 15px ke 5px supaya nempel bby */
+    margin-bottom: 15px;
+    width: 100%;
+    width: fit-content; /* KUNCINYA DI SINI: Wrapper hanya selebar isinya */
+    margin-left: auto;
+  }
+
+/* Desain Tombol Pause dengan efek Glassmorphism */
+.btn-pause-kecil {
+  margin: 0 !important;
+    background: #ff0000;
+    color: white;
+    border: none;
+    width: 80px;
+    height: 60px;
+    border-radius: 30%; /* Membuat tombol bulat */
+    cursor: pointer;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+    z-index: 10001;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.btn-pause-kecil:hover {
+    transform: scale(1.1);
+}
+
+/* Modifikasi sedikit pada ID timer Anda */
+#timer { 
+  margin: 0 !important; /* Hilangkan margin bawaan teks */
+    white-space: nowrap;
+    font-size: 24px; 
+    font-weight: bold;
+    color: #2c3e50; 
+    margin-bottom: 0; /* Hapus margin bawah karena sudah diatur oleh container */
+}
+
 .timer-habis { color: #e74c3c !important; }
 
 .soal { 
@@ -343,6 +386,7 @@ ruby rt { font-size: 0.6em; }
   opacity: 0;
   pointer-events: none;
 }
+
 
 /* Memastikan konten soal mengambil sisa ruang */
 .content {
