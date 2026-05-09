@@ -62,9 +62,14 @@
       align-items: center;
       gap: 8px;">
       <span id="icon-toggle">✕</span> <span id="text-toggle">Tutup</span>
-    </button>
+   <div style="display: flex; justify-content: flex-end; width: 100%; padding-right: 20px;">
+    
+    <!-- Div kecil ini yang bikin tombol & teks nempel (gap: 5px) -->
+    <div class="timer-wrapper">
+    <button id="btn-pause" class="btn-pause" onclick="togglePause()">⏸</button>
     <div id="timer">Waktu: 70:00</div>
-  </div>
+
+</div>
 
   <div class="container">
     <div class="sidebar-wrapper" id="sidebar-konten">
@@ -2494,22 +2499,76 @@ function tampil() {
   document.getElementById("btnNext").style.display = index === soal.length - 1 ? "none" : "inline-block";
 }
 
-function jawab(i) { jawaban[index] = i; tampil(); }
+function jawab(i) { if (isPaused) return; jawaban[index] = i; tampil(); }
 function next() { if (index < soal.length - 1) { index++; tampil(); } }
 function prev() { if (index > 0) { index--; tampil(); } }
 function go(i) { index = i; tampil(); }
 
+function next() { 
+  if (isPaused) return; // Kunci tombol Next saat pause
+  if (index < soal.length - 1) { index++; tampil(); } 
+}
+
+function prev() { 
+  if (isPaused) return; // Kunci tombol Prev saat pause
+  if (index > 0) { index--; tampil(); } 
+}
+
+function go(i) { 
+  if (isPaused) return; // Kunci sidebar nomor soal saat pause
+  index = i; 
+  tampil(); 
+}
+let isPaused = false; // Status awal tidak sedang pause
+
 function startTimer() {
   timer = setInterval(() => {
-    if (waktu <= 0) { clearInterval(timer); end(); return; }
-    let m = Math.floor(waktu / 60), s = waktu % 60;
+    // 1. Cek apakah sedang pause. Jika iya, jangan lakukan apa-apa.
+    if (isPaused) return; 
+
+    // 2. Logika pengurangan waktu (kode asli Anda)
+    if (waktu <= 0) { 
+      clearInterval(timer); 
+      end(); 
+      return; 
+    }
+    
+    let m = Math.floor(waktu / 60);
+    let s = waktu % 60;
     document.getElementById("timer").innerText = `Waktu: ${m}:${String(s).padStart(2, '0')}`;
-    if (waktu <= 300) document.getElementById("timer").classList.add("timer-habis");
+    
+    if (waktu <= 300) {
+      document.getElementById("timer").classList.add("timer-habis");
+    }
+    
     waktu--;
   }, 1000);
 }
 
+function togglePause() {
+  isPaused = !isPaused; 
+  const btn = document.getElementById("btn-pause");
+  const overlay = document.getElementById("pause-overlay");
+  const contentPelajaran = document.querySelector(".content");
+
+  if (isPaused) {
+    btn.innerHTML = "▶"; // Berubah jadi simbol Play
+    btn.style.background = "#2ecc71"; 
+    overlay.style.display = "flex"; 
+    contentPelajaran.style.pointerEvents = "none"; 
+    contentPelajaran.style.filter = "blur(20px)";
+  } else {
+    btn.innerHTML = "⏸"; // Berubah jadi simbol Pause
+    btn.style.background = "#ff0000"; 
+    overlay.style.display = "none";
+    contentPelajaran.style.pointerEvents = "auto"; 
+    contentPelajaran.style.filter = "none";
+  }
+}
 function finishUjian() {
+  if (isPaused) {alert("Silakan tekan Resume terlebih dahulu sebelum mengakhiri ujian.");
+    return;
+  }
   let belum = jawaban.filter(x => x === undefined).length;
   let pesan = belum > 0 ? `Masih ada ${belum} soal belum dijawab. Selesai?` : "Selesai ujian?";
 
@@ -2685,5 +2744,27 @@ function selebrasiLulus() {
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js">
 
 </script>
+<div id="pause-overlay" style="
+    display: none; 
+    position: fixed; 
+    top: 0; left: 0; 
+    width: 100%; height: 100%; 
+    background: rgba(0,0,0,0.4); 
+    z-index: 999; 
+    justify-content: center; 
+    align-items: center;
+    backdrop-filter: blur(5px);">
+    
+    <div style="
+        background: white; 
+        padding: 30px; 
+        border-radius: 20px; 
+        text-align: center; 
+        box-shadow: 0 10px 25px rgba(0,0,0,0.2);">
+        <h2 style="color: #2c3e50; margin-bottom: 10px;">Ujian Diberhentikan</h2>
+        <p style="color: #303435; margin-bottom: 20px;">Mau kemana hayo??🙄</p>
+        <button class="btn" onclick="togglePause()" style="width: 100%;">Lanjutkan Sekarang</button>
+    </div>
+</div>
 </body>
 </html>
